@@ -1,0 +1,50 @@
+.form-base{
+  display: flex;
+  flex-direction: column;
+  @include rem(width,624px);
+  @include rem(padding-top,40px);
+  @include rem(padding-bottom,40px);
+  @include rem(padding-right,25px);
+  @include rem(padding-left,25px);
+  @include rem(height,312px);
+  justify-content: center;
+  align-items: center;
+  background-color: #F6F6F6;
+  border-radius: 8px;
+
+  .form-base__title{
+    @include rem(margin-bottom,24px);
+
+    .form-title{
+      @include rem(font-size,24px);
+      @include rem(line-height,32px);
+      font-weight: 700;
+    }
+  }
+}
+
+.form-control{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+
+  span{
+    width: 100%;
+    @include rem(margin-bottom,6px);
+    @include rem(font-size,16px);
+    @include rem(line-height,24px);
+
+  }
+
+  .modal-input{
+    @include rem(width,316px);
+    @include rem(height,50px);
+  }
+
+  button{
+    border: none;
+    @include rem(width,236px);
+    @include rem(height,50px);
+    @include rem(margin-bottom,10px);
+  }
+}

@@ -1,0 +1,88 @@
+// modal
+#modal-callback(style="display:none")
+    .modal-wrapper
+        .modal__row 
+            .modal__content 
+                h3.modal-header.texts24 Заказать звонок
+                form.js-ajax-form
+                    .form-control  
+                        input.modal-input.texts18(type="text", name="name", placeholder="Ваше имя" required)
+                    .form-control  
+                        input.modal-input.texts18(type="tel", name="phone", placeholder="Ваш телефон" required)
+                    .form-control 
+                        select.modal-input.texts18(name="choose")
+                            option(value="none") Выберите салон
+                            option(value="variant-1") Салон 1
+                            option(value="variant-2") Салон 2
+                    label.checkbox.checkbox--modal.texts18 Отправляя данные, вы даете согласие на обработку персональных данных в соответствии с
+                        a.texts18(href="#") политикой конфиденциальности
+                        input.checkbox-input.texts18(type="checkbox" name="agreement" value="a1")
+                        span.checkbox-style.checkbox-style--modal.texts18
+                    .button-block
+                        button.btn.btn--modal.btn--fullwidth.texts18(type="submit") Отправить
+
+#modal-sum(style="display:none")
+    .modal-wrapper
+        .modal__row 
+            .modal__content 
+                h3.modal-header.texts24 Рассчитать стоимость кухни
+                p.texts18 Заполните форму и мы свяжемся с Вами в ближайшее время
+                form.js-ajax-form
+                    .form-control  
+                        input.modal-input.texts18(type="text", name="name", placeholder="Имя" required)
+                    .form-control  
+                        input.modal-input.texts18(type="tel", name="phone", placeholder="Ваш телефон" required)
+                    .form-file.form-file--dark
+                        input.texts18(type="file" name="files[]" id="upload-file__input_1" class="upload-file__input" accept=".jpg, .jpeg, .png, .gif, .bmp, .doc, .docx, .xls, .xlsx, .txt, .tar, .zip, .7z, .7zip", multiple)
+                        label.upload-file__label.texts18(for="upload-file__input_1")
+                            img.upload-file__icon(src="images/file-icon-dark.svg" alt="")
+                            span.upload-file__text.texts18 Загрузить свой чертёж
+                                span.texts18 или перетащите его сюда
+                            span.upload-file__check.texts18 Добавлено
+                    label.checkbox.checkbox--modal.texts18 Отправляя данные, вы даете согласие на обработку персональных данных в соответствии с
+                        a.texts18(href="#") политикой конфиденциальности
+                        input.checkbox-input.texts18(type="checkbox" name="agreement" value="a1")
+                        span.checkbox-style.checkbox-style--modal.texts18
+                    .button-block
+                        button.btn.btn--modal.btn--fullwidth.texts18(type="submit") Рассчитать
+
+#modal-zamer(style="display:none")
+    .modal-wrapper
+        .modal__row 
+            .modal__content 
+                h3.modal-header.texts24 Записаться на замер
+                p.texts18 Заполните форму и мы свяжемся с Вами в ближайшее время
+                form.js-ajax-form
+                    .form-control
+                        label.placeinput.placeinput--modal
+                            input.modal-input.texts18(type="text" name="name", required)
+                            .placeholder.placeholder--modal.texts18 Ваше имя
+                                span.texts18 *
+                    .form-control 
+                        label.placeinput.placeinput--modal
+                            input.modal-input.texts18(type="tel" name="phone", required)
+                            .placeholder.placeholder--modal.texts18 Ваш телефон
+                                span.texts18 *
+                    .form-control 
+                        label.placeinput.placeinput--modal
+                            input.modal-input.texts18(type="text" name="address", required)
+                            .placeholder.placeholder--modal.texts18 Ваш адрес
+                                span.texts18 *
+                    .form-control
+                        textarea.texts18(placeholder="Ваши пожелания")
+                    label.checkbox.checkbox--modal.texts18 Отправляя данные, вы даете согласие на обработку персональных данных в соответствии с
+                        a.texts18(href="#") политикой конфиденциальности
+                        input.checkbox-input.texts18(type="checkbox" name="agreement" value="a1")
+                        span.checkbox-style.checkbox-style--modal.texts18
+                    .button-block
+                        button.btn.btn--modal.btn--fullwidth.texts18(type="submit") Записаться
+                    .modal__text.texts18 Стоимость замера с дизайн-проектом составляет 500 руб. При заключении Договора в салоне, сумма Вам возвращается — вычитается из стоимости заказа.
+
+#modal-success(style="display:none")
+    .modal-wrapper
+        .modal__row 
+            .modal__content 
+                h3.modal-header.texts24 Спасибо
+                p.texts18 Мы свяжемся с Вами в ближайшее время
+
+// / modal

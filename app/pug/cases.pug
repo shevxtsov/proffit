@@ -1,0 +1,45 @@
+extends layout/base
+
+block title
+    title Кейсы
+
+include mixins/works-box
+
+
+block content
+
+    .breadcrumbs
+        .container
+            ul.breadcrumbs__list
+                li
+                    a(href="index.html") Главная
+                li
+                    span Кейсы
+
+    section.cases-section
+        .container
+            h1.page-title Кейсы
+            p.subtitle. 
+                Профессионалами ПроффИТ создано свыше 200 различных проектов, от премиальных лендингов до крупных интернет-магазинов.
+            .filter
+                ul.filter__list
+                    li
+                        a.is-active(href="#") Все
+                    li
+                        a(href="#") Landing Page
+                    li
+                        a(href="#") Интернет-магазин
+                    li
+                        a(href="#") Корпоративный сайт
+                    li
+                        a(href="#") Продвижение сайтов (SEO)
+            .row
+                +works-box('images/ourworks/work-1.png','Проект 1','Разработка сайта')
+                +works-box('images/ourworks/work-2.png','Проект 2','Разработка сайта')
+                +works-box('images/ourworks/work-3.png','Проект 3','Разработка сайта')
+                +works-box('images/ourworks/work-4.png','Проект 4','Разработка сайта')
+            .row
+                +works-box('images/ourworks/work-1.png','Проект 1','Разработка сайта')
+                +works-box('images/ourworks/work-2.png','Проект 2','Разработка сайта')
+                +works-box('images/ourworks/work-3.png','Проект 3','Разработка сайта')
+                +works-box('images/ourworks/work-4.png','Проект 4','Разработка сайта')

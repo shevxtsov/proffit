@@ -1,0 +1,16 @@
+mixin benefit-box( img,title, text)
+    // benefit-box
+    if text
+        .benefit-box 
+            .benefit-box__img
+                img(src=img)
+            .benefit-box__content
+                h5.benefit-box-title=title
+                p.benefit-box__text=text
+    else 
+       .benefit-box.benefit-box--small
+            .benefit-box__img
+                img(src=img)
+            .benefit-box__content
+                h5.benefit-box__title=title
+    // / benefit-box

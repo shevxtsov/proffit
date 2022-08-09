@@ -1,0 +1,17 @@
+mixin description-card(img,title,text,big)
+    // description-card
+    if big
+        .description-card
+            .description-card__img 
+                img(src=img, alt="")
+            .description-card__content 
+                h5.subtitle.subtitle--small= title
+                .card-text= text
+    else 
+        .description-card.description-card--small
+            .description-card__img 
+                img(src=img, alt="")
+            .description-card__content.description-card__content--small 
+                h5.desc-title= title
+
+    // / description-card

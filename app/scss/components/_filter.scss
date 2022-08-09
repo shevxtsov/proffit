@@ -1,0 +1,46 @@
+.filter {
+    border-top: 1px solid #DFDFE0;
+    @include rem(padding-top, 24px);
+    @include rem(margin-bottom, 16px);
+    
+    &__list {
+        display: flex;
+        align-items: center;
+
+        li {
+            @include rem(margin-right, 24px);
+
+            a {
+                color: $text-grey;
+                @include rem(font-size, 18px);
+                @include rem(line-height, 32px);
+
+                &.is-active {
+                    color: $primary;
+                }
+
+                &:hover {
+                    color: $primary
+                }
+
+                @include media("max", "md"){
+                    font-size: 16px;
+                    line-height: 28px;
+                }
+            }
+
+            @include media("max", "md"){
+                margin-right: 16px;
+            }
+        }
+
+        @include media("max", "md"){
+           flex-wrap: wrap;
+        }
+    }
+
+    @include media("max", "md"){
+        padding-top: 16px;
+        margin-bottom: 16px;
+    }
+}

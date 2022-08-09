@@ -1,0 +1,52 @@
+.text {
+    font-weight: 400;
+    @include rem(font-size, 18px);
+    @include rem(line-height, 28px);
+    color: $text-grey;
+
+    @include media("max", "md"){
+        font-size: 16px;
+        line-height: 24px;
+    }
+
+    &--bold {
+        font-weight: 700 ;
+        @include rem(padding-top, 17px);
+        @include rem(padding-bottom, 5px);
+    }
+
+    &--bottom {
+        @include rem(margin-bottom, 54px);
+    }
+
+    &--big {
+        font-weight: 500;
+        @include rem(font-size, 24px);
+        @include rem(line-height, 30px);
+
+        @include media("max", "md"){
+            font-size: 20px;
+            line-height: 26px;
+        }
+    }
+
+    &--margin {
+        @include rem(margin-bottom, 73px);
+    }
+
+    &--list {
+        color: $text-grey;
+        @include rem(padding-right, 15px);
+        @include rem(padding-left, 10px);
+        list-style-type: decimal;
+    }
+}
+
+.custom-text {
+    @include rem(font-size, 18px);
+    @include rem(line-height, 24px);
+}
+
+.text-list {
+    @include rem(padding-bottom, 50px);
+}

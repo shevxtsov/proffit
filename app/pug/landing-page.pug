@@ -1,0 +1,150 @@
+extends layout/base
+
+block title
+    title Создание сайтов - Разработка продающих лендингов
+include mixins/first-section
+include mixins/benefit-box
+include mixins/faq-block
+include mixins/store-card
+include mixins/card-box
+include mixins/works-box
+include mixins/description-card
+
+
+block content
+
+    .breadcrumbs
+        .container
+            ul.breadcrumbs__list
+                li
+                    a(href="index.html") Главная
+                li
+                    span Создание сайтов - Разработка продающих лендингов
+    +first-section('Разработка продающих лендингов','Закажите премиальный Landing Page в ПроффИТ – получите бесплатное рекламное сопровождение', false, 'images/section-images/laptop.jpg', false, true, 'Landing Page – одностраничник, который позволяет лаконично, эффектно и информативно достучаться до аудитории и объяснить пользователям сильные стороны вашего продукта С помощью лендингов можно рекламировать как отдельную продукцию, так и бренд в целом. Благодаря мастерству ПроффИТ вы получите мощный инструмент продаж.')
+
+    section.benefits-section
+        .container
+            h2.section-title Landing Page позволяет:
+            .benefits-section__content
+                .row
+                    +benefit-box('images/check-box.svg', 'Запустить стартап с фиксированным бюджетом' )
+                    +benefit-box('images/check-box.svg', 'Ярко продемонстрировать достоинства компании')
+                    +benefit-box('images/check-box.svg', 'Увеличить продажи в интернете')
+                .row
+                    +benefit-box('images/check-box.svg', 'Оценить спрос на продукцию' )
+                    +benefit-box('images/check-box.svg', 'Нарастить целевую аудиторию')
+    section.form-section
+        .container
+            .form-section__title
+                h2.section-title--white Узнайте преимущества лендинга в деталях
+                .form-text Оставьте контактные данные – мы бесплатно проконсультируем вас по проекту
+            .form-section__body
+                form.js-ajax-form
+                    .form-control
+                        .form-text Ваш имя
+                        input.modal-input(type="text", name="name", placeholder="Ваше имя" required)
+                    .form-control
+                        .form-text Ваш номер телефона
+                        input.modal-input(type="tel", name="phone", placeholder="Ваш телефон" required)
+                    .button-block
+                        button.btn.btn--modal.btn--fullwidth(type="submit") Отправить
+            .form-section__footer
+                .footer-text Нажимая на кнопку, вы принимаете политику конфиденциальности и даете согласие на обработку персональных данных
+    section.creation-section
+        .container
+            .creation-section__list           
+                h2.section-title Этапы создания лендингов в ПроффИТ
+                h3.subtitle.subtitle--big Анализ рынка 
+                ul.list.list--margin
+                    li Составление анкеты.              
+                    li Исследование рыночной ниши.
+                    li Составление УТП.
+                    li Изучение целевой аудитории.
+            .creation-section__img
+                img.img(src="images/section-images/create-img.png")
+            .creation-section__tabs 
+                .create-tab Анализ рынка
+                .create-tab Разработка прототипа
+                .create-tab Дизайн
+                .create-tab Верстка
+                .create-tab Контекстная реклама
+                .create-tab Неограниченный функционал
+    section.works.collection-section 
+        .container 
+            h2.section-title Коллекция наших проектов
+            p.subtitle.
+                Ознакомьтесь с примерами наших работ, которые демонстрируют достоинства товаров клиента, привлекают внимание аудитории и увеличивают продажи в интернете.
+            .row
+                +works-box('images/ourworks/work-1.png','Проект 1','Разработка сайта')
+                +works-box('images/ourworks/work-2.png','Проект 2','Разработка сайта')
+            .row
+                +works-box('images/ourworks/work-3.png','Проект 3','Разработка сайта')
+                +works-box('images/ourworks/work-4.png','Проект 4','Разработка сайта')
+            .text-center
+                a.btn.btn--mid(href="#") Посмотреть все работы
+    section.professianals-section
+        .container 
+            h2.section-title ПроффИТ – это:
+            .row 
+                +description-card('images/check-box.svg', 'Уникальные проекты', 'Каждый лендинг компании разрабатывается по индивидуальному плану. Вы получите оригинальный одностраничный сайт, который будет одновременно и привлекательным, и продающим.', true)
+                +description-card('images/check-box.svg', 'Акцент на долгосрочное сотрудничество', 'Мало лишь разработать лендинг – его еще нужно сопровождать. Мы рассчитываем на долгосрочную работу с клиентами и гарантируем обслуживание в течение долгого времени.',true)
+                +description-card('images/check-box.svg', 'Достижение нужного результата','Работаем в соответствии с целями, обозначенными клиентом. Не допускаем просрочек обязательств.',true)
+            .row 
+                +description-card('images/check-box.svg', 'Гарантии качества', 'В договоре прописываются все важные показатели KPI. Все всегда будете уверены в высоком качестве нашего обслуживания.', true)
+                +description-card('images/check-box.svg', 'Регулярная отчетность', 'Мы не оставляем клиента без информации. ПроффИТ регулярно отчитывается о результатах проведенных работ.',true)
+                +description-card('images/check-box.svg', 'Экономия бюджета','Оптимизируем ваши затраты при одновременном обеспечении высокой эффективности работы.',true)
+    section.strength-section
+        .container 
+            h2.section-title При обращении в ПроффИТ вы получаете
+            .row
+                +description-card('images/icons/1.svg', 'При обращении в ПроффИТ вы получаете' ,'Ваш проект будет сопровождать сплоченная команда профессионалов.', true)
+                +description-card('images/icons/2.svg', 'Оперативное достижение результата' ,'Используются только проверенные и мощные инструменты по созданию и продвижению лендингов.', true)
+                +description-card('images/icons/3.svg', 'Соблюдение сроков' ,'У каждого этапа разработки – свое строго выделенное время', true)
+            .row
+                +description-card('images/icons/4.svg', 'Прозрачную стоимость' ,'Цена каждой услуги прописывается в договоре. Никаких комиссий и других скрытых условий.', true)
+                +description-card('images/icons/5.svg', 'Качество, проверенное клиентами и временем' ,'Наши лендинги действительно продают и рекламируют.', true)
+                +description-card('images/icons/6.svg', 'Гарантийное обслуживание','После запуска проекта мы предоставляем бесплатное техническое сопровождение проекта в течение 1 года', true)       
+    section.form-section.form-section--subtitle
+        .container 
+            .row
+                h3.text-white Лендинг от ПроффИТ – минимум слов, максимум продаж
+    section.our-clients 
+        .container 
+            h2.section-title Наши клиенты
+            .row 
+                img.img(src='images/logo/Logo-1.png')
+                img.img(src='images/logo/Logo-2.png')
+                img.img(src='images/logo/Logo-3.png')
+                img.img(src='images/logo/Logo-4.png')
+                img.img(src='images/logo/Logo-5.png')
+    section.social-section
+        .container
+            h2.section-title Способы связи с ПроффИТ
+            .row
+                a.social-box(href="#") Написать в WhatsApp
+                    img.social-icon(src="images/contact-icons/whatsapp-big-icon.svg")
+                a.social-box(href="#") Написать в Telegram
+                    img.social-icon(src="images/contact-icons/telegram-big-icon.svg")
+                a.social-box(href="#") Отправить Email
+                    img.social-icon(src="images/contact-icons/mail-big-icon.svg")
+                a.social-box(href="#") Оставить заявку
+                    img.social-icon(src="images/contact-icons/callback-big-icon.svg")
+                a.social-box(href="#") Написать в ВКонтакте
+                    img.social-icon(src="images/contact-icons/vk-big-icon.svg")
+    
+    section.faq-section
+        .container
+            .row
+                .faq-section__column
+                    h2.section-title Ответы на популярные вопросы
+                    p.subtitle. 
+                        Мы подготовили ответы на наиболее волнующие вас вопросы,
+                        чтобы сотрудничество изначально было более гладким и ясным.
+                .faq-section__column
+                    +faq-block('Почему стоимость сайта выше, чем у среднерыночная?','Сколько специалистов работают в отделе разработке и продвижения?')
+                    +faq-block('Какими CMS пользуетесь?','Сколько специалистов работают в отделе разработке и продвижения?')
+                    +faq-block('Можем мы в дальнейшем менять информацию на сайте самостоятельно, например, новости/фото/товары?','Сколько специалистов работают в отделе разработке и продвижения?')
+                    +faq-block('Какую гарантию даете на создание сайта?','Сколько специалистов работают в отделе разработке и продвижения?')
+                    +faq-block('Что входит в стоимость разработки сайта?','Сколько специалистов работают в отделе разработке и продвижения?')
+                    +faq-block('Сколько времени уходит на создание сайта?','Сколько специалистов работают в отделе разработке и продвижения?')
+                    +faq-block('Как будет проходить процесс нашей с вами работы по созданию сайта?','Сколько специалистов работают в отделе разработке и продвижения?')

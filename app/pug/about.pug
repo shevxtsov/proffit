@@ -1,0 +1,84 @@
+extends layout/base
+
+block title
+    title О компании
+
+include mixins/experience-block
+include mixins/blog-box
+include mixins/sertificate-block
+include mixins/faq-block
+
+block content
+
+    .breadcrumbs
+        .container
+            ul.breadcrumbs__list
+                li
+                    a(href="index.html") Главная
+                li
+                    span О компании
+
+    section.about-main-section
+        .container
+            h1.page-title О компании ПроффИТ
+            .row
+                .about-main-section__column
+                    .column-text
+                        p.about-text Компания ПроффИТ с 2017 года разрабатывает и помогает в продвижении премиальных, высокодоходных и надежных сайтов для клиентов из любой точки России
+                        p.about-text Нашими мастерами создано более 500 коммерчески успешных проектов, среди которых лендинги, корпоративные сайты и интернет-магазины. Наша команда знает, что необходимо для достижения лидерства в определенной отрасли.
+                    .column-body
+                        +experience-block('>5 лет', 'на рынке')
+                        +experience-block('>10', 'специалистов')
+                        +experience-block('>1000', 'оказанных услуг по продвижению')
+                        +experience-block('>200', 'коммерческих сайтов')
+                .about-main-section__column
+                    img.column-img(src='images/about-img-1.png')
+
+    section.blog-section
+        .container
+            h2.section-title Блог ПроффИТ для клиентов
+            .row
+                +blog-box('images/blogs/1.png','19 января 2022','Тонкости SEO-продвижения сайтов','При использовании современных «белых» методов оптимизации можно гарантировать своему сайту верхние строчки в результатах поисковой выдачи...')
+                +blog-box('images/blogs/2.png', '19 января 2022', 'Будни разработчика: как правильно создавать сайты', 'Разработка, как и интернет-конъюнктура, не стоит на месте. Профессионал должен постоянно обновлять свой арсенал для того, чтобы быть в ногу со временем...')
+                +blog-box('images/blogs/3.png','19 января 2022','CRM: самые популярные системы','CRM востребованы у представителей бизнеса. Рассмотрим популярные системы контроля за работой сайтов...')
+
+    section.sertificates-section
+        .container
+            h2.section-title Наши сертификаты
+            .row
+                +sertificate-block('images/sertificates/1.png','Бизнес-партнёр компании «1С-Битрикс»')
+                +sertificate-block('images/sertificates/1.png','Бизнес-партнёр компании «1С-Битрикс»')
+                +sertificate-block('images/sertificates/1.png','Бизнес-партнёр компании «1С-Битрикс»')
+                +sertificate-block('images/sertificates/1.png','Бизнес-партнёр компании «1С-Битрикс»')
+
+    section.social-section
+        .container
+            h2.section-title Способы связи с ПроффИТ
+            .row
+                a.social-box(href="#") Написать в WhatsApp
+                    img.social-icon(src="images/contact-icons/whatsapp-big-icon.svg")
+                a.social-box(href="#") Написать в Telegram
+                    img.social-icon(src="images/contact-icons/telegram-big-icon.svg")
+                a.social-box(href="#") Отправить Email
+                    img.social-icon(src="images/contact-icons/mail-big-icon.svg")
+                a.social-box(href="#") Оставить заявку
+                    img.social-icon(src="images/contact-icons/callback-big-icon.svg")
+                a.social-box(href="#") Написать в ВКонтекте
+                    img.social-icon(src="images/contact-icons/vk-big-icon.svg")
+    
+    section.faq-section
+        .container
+            .row
+                .faq-section__column
+                    h2.section-title Ответы на популярные вопросы
+                    p.subtitle. 
+                        Мы подготовили ответы на наиболее волнующие вас вопросы,
+                        чтобы сотрудничество изначально было более гладким и ясным.
+                .faq-section__column
+                    +faq-block('Сколько специалистов работают в отделе разработке и продвижения?','Сколько специалистов работают в отделе разработке и продвижения?')
+                    +faq-block('Как я буду получать информацию о ходе работы?','Сколько специалистов работают в отделе разработке и продвижения?')
+                    +faq-block('Есть ли гарантии?','Сколько специалистов работают в отделе разработке и продвижения?')
+                    +faq-block('Работаете ли вы с оплатой за результат?','Сколько специалистов работают в отделе разработке и продвижения?')
+                    +faq-block('Как вы определяете оптимальный способ продвижения?','Сколько специалистов работают в отделе разработке и продвижения?')
+                    +faq-block('Вы работаете с НДС?','Сколько специалистов работают в отделе разработке и продвижения?')
+                    +faq-block('Есть ли скидки?','Сколько специалистов работают в отделе разработке и продвижения?')

@@ -1,0 +1,11 @@
+mixin marketing-box(img, title, ...list)
+    // marketing-box
+    .marketing-box
+        .marketing-box__img
+            img(src=img)
+        h5.marketing-box__title=title
+        ul.marketing-box__list
+            each item in list
+                li
+                    span=item
+    // / marketing-box

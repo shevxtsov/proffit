@@ -1,0 +1,23 @@
+.card-box {
+    background-color: #EFEFEF;
+    @include rem(padding-bottom,32px);
+    @include rem(padding-top,32px);
+    @include rem(padding-left,24px);
+    @include rem(padding-right,29px);
+    @include rem(margin-bottom,30px);
+    @include rem(max-width,594px);
+    @include rem(border-radius,6px);
+
+    .form-control {
+        display: flex ;
+    }
+
+    .subtitle {
+        font-weight: 700;
+    }
+
+    .card-list {
+        @include rem(font-size,18px);
+        @include rem(line-height,28px);
+    }
+}

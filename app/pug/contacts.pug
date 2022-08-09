@@ -1,0 +1,29 @@
+extends layout/base
+
+block title
+    title Контакты
+
+include mixins/contacts-detail
+
+
+block content
+
+    .breadcrumbs
+        .container
+            ul.breadcrumbs__list
+                li
+                    a(href="index.html") Главная
+                li
+                    span Контакты
+                    
+    section.contacts-page 
+        .container
+            h1.page-title Контакты
+            .row.contacts              
+                .contacts__info 
+                    +contacts-detail('images/contact-icons/address.svg', 'Адрес', 'Набережные Челны')
+                    +contacts-detail('images/contact-icons/mail.svg', 'Email', 'info@proffit-site.ru')
+                    +contacts-detail('images/contact-icons/phone.svg', 'Телефон', '+7 (927) 499-78-68')
+                    +contacts-detail('images/contact-icons/social.svg', 'Соц сети', 'images/contact-icons/whatsapp.svg', 'images/contact-icons/telegram.svg','images/contact-icons/vk.svg', true)
+                .contacts-page__map 
+                    iframe(src="https://yandex.ru/map-widget/v1/?um=constructor%3A52d4edaaa50519469e36ce8d5d3f09a745bc5a6faf65ba0cc7c428c7fa3840ad&amp;source=constructor" width="835" height="652" frameborder="0")

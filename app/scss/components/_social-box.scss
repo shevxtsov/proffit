@@ -1,0 +1,72 @@
+.social-box{
+    @include rem(width,265px);
+    @include rem(height,48px);
+    @include rem(font-size, 18px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    @include rem(margin-bottom,32px);
+    @include rem(padding-left, 30px);
+    color: #fff;
+    position: relative;
+
+    &:hover{
+        .social-icon{
+            @include rem(width,80px);
+            @include rem(height,80px);
+
+            @include media("max", "md"){
+                width: 74px;
+                height: 76px;
+            }
+        }
+    }
+
+    img{
+        @include rem(width,74px);
+        @include rem(height,74px);
+        position: absolute;
+        @include rem(left,-30px);
+        @include rem(top,-13px);
+
+        @include media("max", "md"){
+            width: 74px;
+            height: 76px;
+            left: -30px;
+            top: -17px;
+        }
+    }
+
+    &:nth-child(1){
+        background-color: #3ADF57;
+        border-radius: 3px;
+    }
+
+    &:nth-child(2){
+        background-color: #1F97C9;
+        border-radius: 3px;
+    }
+
+    &:nth-child(3){
+        background-color: #8495B2;
+        border-radius: 3px;
+    }
+
+    &:nth-child(4){
+        background-color: #CE2F72;
+        border-radius: 3px;
+    }
+
+    &:nth-child(5){
+        background-color: #0077FF;
+        border-radius: 3px;
+    }
+
+    @include media("max", "md"){
+        font-size: 16px;
+        line-height: 16px;
+        width: 260px;
+        height: 40px;
+        margin-bottom: 20px;
+    }
+}

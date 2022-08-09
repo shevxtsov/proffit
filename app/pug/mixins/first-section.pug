@@ -1,0 +1,38 @@
+include form-base
+mixin first-section(title, subtitle, text, img, form, primary, article)
+    // first-section
+    if form
+        section.about-main-section
+            .container
+                .row
+                    .about-main-section__column
+                        h1.page-title=title
+                        h4.subtitle.subtitle--meduim=subtitle
+                        .column-body
+                            +form-base(text)
+                    .about-main-section__column
+                        img.column-img(src=img)
+    else if primary
+        section.about-main-section
+            .container
+                .row
+                    .about-main-section__column
+                        h1.page-title=title
+                        h4.subtitle.subtitle--primary=subtitle
+                        .column-text
+                            p.block-text=article    
+                    .about-main-section__column
+                        img.column-img(src=img)
+    else 
+        section.about-main-section
+            .container
+                .row
+                    .about-main-section__column
+                        h1.page-title=title
+                        //- h4.subtitle.subtitle--meduim=subtitle
+                        .column-text
+                            p.block-text=text 
+                    .about-main-section__column
+                        img.store-img(src=img)
+
+    // / first-section

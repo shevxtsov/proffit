@@ -1,0 +1,123 @@
+/* form-section */
+.form-section{
+    display: flex;
+    justify-content: center;
+    position: relative;
+    background: linear-gradient(to bottom, #fff 50%, #EFEFEF 50%);
+
+    &--subtitle {
+        background: linear-gradient(to top, #fff 50%, #EFEFEF 50%);
+
+        .text-white{
+            @include rem(width,850px);
+            @include rem(font-size,24px);
+            @include rem(line-height,32px);
+            @include rem(padding-left,172px);
+            color: #fff ;
+            font-weight: 400;
+            text-align: center;
+            
+        }
+    }
+    .container{
+        display: flex;
+        flex-direction: column;
+        background: #1C232D;
+
+        @include rem(padding-top,72px);
+        @include rem(padding-bottom,72px);
+        @include rem(padding-right,72px);
+        @include rem(padding-left,72px);
+
+        .row {
+            display: flex;
+
+            .subtitle {
+                @include rem(margin-right,60px);
+                @include rem(padding-left,24px);
+                @include rem(min-width,515px);
+            }
+
+            .btn {
+                @include rem(max-height,50px);
+            }
+        }
+    }
+
+    &__title{
+        display: flex;
+        justify-content: space-between;
+        @include rem(margin-bottom,34px);
+        align-items: flex-end;
+    }
+
+    .form-text {
+        color: #8896AB;
+        @include rem(width,374px);
+        @include rem(font-size,16px);
+        @include rem(line-height,22px);
+        @include rem(margin-bottom, 6px);
+        
+    }
+
+    &__body{
+        @include rem(margin-bottom,16px);
+
+        .js-ajax-form{
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+
+            .form-control{
+                @include rem(width,416px);
+                display: flex;
+                flex-direction: column;
+
+                .modal-input{
+                    @include rem(height,50px);
+                    @include rem(width,410px);
+                    @include rem(border-radius,4px);
+                }
+            }
+
+            .btn{
+                @include rem(width,216px);
+                @include rem(height,50px);
+            }
+        }
+    }
+
+    &__footer{
+        .footer-text{
+            color: #8896AB;
+            @include rem(font-size, 14px);
+            @include rem(margin-top, 6px);
+        }
+    }
+}
+
+.form-seo {
+    .form__inputs {
+        display: flex;
+        @include rem(padding-bottom,14px);
+    }
+
+    .form__submit {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        @include rem(padding-top,17px);
+    }    
+    
+    .form-control {
+        &:last-child {
+            @include rem(margin-left, 30px);           
+        }
+    }
+
+    .form__checkbox {
+        display: flex;
+        justify-content: flex-end;
+        @include rem(padding-right, 228px); 
+    }
+}

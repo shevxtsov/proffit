@@ -1,0 +1,59 @@
+.info{
+	text-align: right;
+}
+
+.info-mobile{
+	display: none;
+}
+
+.info-block{
+	display: flex;
+	align-items: center;
+
+	img{
+		@include rem(width, 20px);
+		@include rem(height, 20px);
+	}
+
+	a{
+		margin-left: 9px;
+		color:$dark;
+		font-weight: 600;
+
+		&:hover{
+			text-decoration: none;
+		}
+	}
+
+	span{
+		display: block;
+		line-height: 22px;
+		font-weight: 700;
+		text-transform: uppercase;
+	}
+
+	h5{
+		line-height: 15px;
+		font-weight: 400;
+		color: #80889c;
+	}
+
+	&--bold{
+		a{
+			font-weight: 700;
+		}
+	}
+
+	@include media("max", "md"){
+		margin-right: 50px;
+
+		img{
+			width: 10px;
+			height: 10px;
+		}
+		
+		a{
+			font-size: 12px;
+		}
+	}
+}

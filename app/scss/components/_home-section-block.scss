@@ -1,0 +1,125 @@
+.home-section-block{
+    display: flex;
+    flex-direction: column;
+    background-color: #fff;
+    color: #556987;
+    align-items: center;
+    text-align: center;
+    box-shadow: 0px 32px 64px -12px rgba(85, 105, 135, 0.08);
+    border-radius: 8px;
+    position: relative;
+    @include rem(width, 490px);
+    @include rem(padding-top, 56px);
+    @include rem(padding-bottom, 56px);
+    @include rem(margin-bottom, 64px);
+
+    &:last-of-type{
+        &:after{
+            content: "";
+            position: absolute;
+            background: url("../images/frames/dots-after.svg") center center / cover no-repeat;
+            @include rem(top, -28px);
+            @include rem(left, 444px);
+            @include rem(width, 150px);
+            @include rem(height, 200px);
+            right: 0;
+            display: block;
+            z-index: -1;
+        }
+    }
+
+    &:after{
+        content: "";
+        position: absolute;
+        background: url("../images/frames/circle-after.svg") center center / cover no-repeat;
+        left:-130px;
+        @include rem(width, 260px);
+        @include rem(height, 260px);
+        @include rem(bottom, 89px);
+        @include rem(left, -104px);
+        display: block;
+        z-index: -1;
+    }
+
+    &__title{
+        color: #2A3342;
+        font-weight: 700;
+        @include rem(font-size, 32px);
+        @include rem(line-height, 38px);
+        @include rem(margin-bottom, 16px);
+
+        @include media("max", "md"){
+            font-size: 24px;
+            line-height: 36px;
+        }
+    }
+
+    &__text{
+        @include rem(font-size, 18px);
+        @include rem(line-height, 24px);
+        @include rem(margin-bottom, 32px);
+        @include rem(max-width, 376px);
+
+        @include media("max", "md"){
+            max-width: 100%;
+            font-size: 16px;
+            line-height: 22px;
+            margin-bottom: 25px;
+        }
+    }
+
+    &__list{
+        flex: 1 0;
+        @include rem(margin-bottom, 28px);
+
+        li{
+            position: relative;
+            @include rem(margin-bottom, 16px);
+
+            span{
+                @include rem(font-size, 20px);
+                @include rem(line-height, 30px);
+                font-weight: 600;
+                position: relative;
+
+                &:after{
+                    content: '';
+                    position: absolute;
+                    background: url("../images/icons/checkbox.svg") center center / cover no-repeat;
+                    @include rem(width,20px);
+                    @include rem(height,20px);
+                    @include rem(left, -30px);
+                    @include rem(top, -2px);
+    
+                    @include media("max", "md"){
+                        width: 15px;
+                        height: 15px;
+                        left: -22px;
+                        top: 0;
+                    }
+                }
+
+                @include media("max", "md"){
+                    max-width: 100%;
+                    font-size: 16px;
+                    line-height: 22px;
+                }
+            }
+
+            @include media("max", "md"){
+                margin-bottom: 10px;
+            }
+        }
+
+        @include media("max", "md"){
+            margin-bottom: 25px;
+        }
+    }
+
+    @include media("max", "md"){
+        margin: 0 auto;
+        width: 90%;
+        margin-bottom: 20px;
+        padding: 30px 20px;
+    }
+}

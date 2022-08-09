@@ -1,0 +1,65 @@
+.achievement-box {
+    background-color: #FFFFFF;
+    @include rem(padding-bottom,116px);
+    @include rem(padding-top,26px);
+    @include rem(padding-left,48px);
+    @include rem(padding-right,48px);
+
+    &__details {
+        display: flex;
+        justify-content: space-between;
+
+        .details-info {
+            display: flex;
+            justify-content: space-between;
+            @include rem(max-width,385px);
+            @include rem(padding-bottom,45px);
+
+            .img {
+                @include rem(width,161px);
+                @include rem(height,62px);
+                @include rem(margin-right,55px);
+            }
+
+            .info {
+                text-align: left;
+                display: inline-block;
+                .info-list {
+                    @include rem(font-size,18px);
+                    @include rem(line-height,24px);
+                    @include rem(padding-bottom,10px);
+                    @include rem(padding-right,10px);
+                    
+                    a {
+                        text-decoration: underline;
+                        @include rem(padding-left,24px);
+                    }
+                    &--weight {
+                        font-weight: 700;
+                        @include rem(padding-left,10px);
+                        
+                    }
+                }   
+            }
+        }
+
+        .social-img{
+            @include rem(width,546px);
+            @include rem(height,450px);
+        }
+
+        .graph-block {
+            @include rem(margin-top,45px);
+            @include rem(margin-bottom,45px);
+
+            .graph-img{
+                @include rem(width,546px);
+                @include rem(height,384px);
+            }
+            .section-subtitle {
+                @include rem(margin-bottom,25px);
+            }
+            
+        }
+    }  
+}

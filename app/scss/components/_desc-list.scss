@@ -1,0 +1,20 @@
+.desc-list {
+    @include rem(padding-top, 8px);
+
+    .list {
+        @include rem(margin-bottom, 8px);
+        color: $text-grey; 
+        font-weight: 400;
+        @include rem(font-size, 18px);
+        @include rem(line-height, 25px);
+        @include rem(padding-left, 30px);
+        position: relative;
+
+        &::before {
+            content: url('../images/icons/checkbox.svg');
+            left: 0;
+            top: 3px;
+            position: absolute;
+        }
+    }
+}

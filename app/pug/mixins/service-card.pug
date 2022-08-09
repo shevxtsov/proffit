@@ -1,0 +1,8 @@
+mixin service-card(title, subtitle, ...lists)
+
+        .service-card
+            .service-card__title=title
+
+            ul.list.list--card=subtitle
+                each list in lists 
+                    li=list

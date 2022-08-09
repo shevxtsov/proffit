@@ -1,0 +1,176 @@
+extends layout/base
+
+block title
+    title Разработка премиальных интернет-магазинов
+include mixins/first-section
+include mixins/benefit-box
+include mixins/faq-block
+include mixins/store-card
+include mixins/card-box
+include mixins/works-box
+include mixins/description-card
+
+
+block content
+
+    .breadcrumbs
+        .container
+            ul.breadcrumbs__list
+                li
+                    a(href="index.html") Главная
+                li
+                    a(href="site-development.html") Создание сайтов
+                li
+                    span Разработка премиальных интернет-магазинов
+
+    +first-section('Разработка премиальных интернет-магазинов ', false , 'Интернет-магазин – ключевой инструмент ведения электронной торговли, который позволяет покупателям в любой точке планеты ознакомиться и заказать продукцию вашего бизнеса. Разработка торговой онлайн-площадки от специалистов компании ПроффИТ – это ваш шанс стать владельцем прибыльного «электронного гипермаркета», без необходимости заботиться об аренде помещений и найме персонала.', 'images/section-images/laptop.jpg', false, false, true  )
+
+    section.benefits-section
+        .container
+            h2.section-title Преимущества интернет-магазинов, разработанных компанией ПроффИТ
+            .benefits-section__content
+                .row
+                    +benefit-box('images/check-box.svg', 'Премиальный дизайн' )
+                    +benefit-box('images/check-box.svg', 'Бесперебойный и надежный механизм онлайн-оплаты')
+                    +benefit-box('images/check-box.svg', 'Гибкая масштабируемость')
+                .row
+                    +benefit-box('images/check-box.svg', 'Легкая работа с каталогом товаров' )
+                    +benefit-box('images/check-box.svg', 'Интерфейс, ориентированный на потребителя')
+                    +benefit-box('images/check-box.svg', 'Удобный контроль за работой площадки')
+    section.form-section
+        .container
+            .form-section__title
+                h2.section-title--white Стоимость разработки интернет-магазина определяется индивидуально
+                .form-text Оставьте контактные данные – наши менеджеры предоставят бесплатную консультацию с обсуждением бюджета
+            .form-section__body
+                form.js-ajax-form
+                    .form-control
+                        .form-text Ваш имя
+                        input.modal-input(type="text", name="name", placeholder="Ваше имя" required)
+                    .form-control
+                        .form-text Ваш номер телефона
+                        input.modal-input(type="tel", name="phone", placeholder="Ваш телефон" required)
+                    .button-block
+                        button.btn.btn--modal.btn--fullwidth(type="submit") Отправить
+            .form-section__footer
+                .footer-text Нажимая на кнопку, вы принимаете политику конфиденциальности и даете согласие на обработку персональных данных
+    section.creation-section
+        .container
+            .creation-section__info            
+                h2.section-title Как мы создаем лучшие интернет-магазины? 
+                h3.subtitle.subtitle--big Анализ бизнеса и создание прототипа
+                p.create-text Организуем всестороннее исследование вашего бизнеса, рынка, конкурентов и целевой аудитории. Уже на основе полученных данных мы подбираем инструментарий и формируем прототип – макет вашего будущего интернет-магазина. 
+                p.create-text.create-text--bold Срок выполнения – 8 дней
+                .button-block
+                        button.btn(type="submit") Подробнее
+            .creation-section__img
+                img.img(src="images/section-images/create-img.png")
+            .creation-section__tabs 
+                .create-tab Анализ бизнеса и создание прототипа
+                .create-tab Разработка дизайна
+                .create-tab Верстка и наполнение контентом
+                .create-tab Тестирование и запуск
+    section.two-weeks-section
+        .container 
+            h2.section-title Всего 2 недели – и вы сможете продавать товары для всего мира
+            p.custom-text Готовые решения для быстрого запуска интернет-магазина с экономией вашего бюджета
+            .row 
+                +store-card('images/section-images/store-img-1.jpg','Готовые прототипы','При использовании современных «белых» методов оптимизации можно гарантировать своему сайту верхние строчки в результатах поисковой выдачи...')
+                +store-card('images/section-images/store-img-2.jpg','Готовые шаблоны дизайна','Разработка, как и интернет-конъюнктура, не стоит на месте. Профессионал должен постоянно обновлять свой арсенал для того, чтобы быть в ногу со временем...')
+                +store-card('images/section-images/store-img-3.jpg','Внедрение CMS','CRM востребованы у представителей бизнеса. Рассмотрим популярные системы контроля за работой сайтов...')
+
+    section.what-next 
+        .container 
+            h2.section-title Интернет-магазин готов – что дальше?
+            .row 
+                +benefit-box('images/check-box.svg', 'Увеличение числа заявок и продаж' , 'Приведем клиентов из поисковых систем Яндекс и Google с применением «белых» методов оптимизации.')
+                +benefit-box('images/check-box.svg', 'Техническая поддержка' , 'Позаботимся о бесперебойной работе онлайн-площадки и ее своевременном обновлении.')
+            .row 
+                +benefit-box('images/check-box.svg', 'Контекстная реклама' , 'Создадим эффективные рекламные кампании, которые будут привлекать реальных клиентов.')
+                +benefit-box('images/check-box.svg', 'SMM-продвижение' , 'ерем на себя заботу по увеличению узнаваемости вашего бренда в таких социальных сетях, как Facebook, Вконтакте, Instagram и других ресурсах')
+    section.works 
+        .container 
+            h2.section-title Примеры проектов Веб студии ПроффИТ
+            p.subtitle.
+                Взгляните на коллекцию интернет-магазинов, разработанных нашими профессионалами для коммерческих компаний.
+            .row
+                +works-box('images/ourworks/work-1.png','Проект 1','Разработка сайта')
+                +works-box('images/ourworks/work-2.png','Проект 2','Разработка сайта')
+            .row
+                +works-box('images/ourworks/work-3.png','Проект 3','Разработка сайта')
+                +works-box('images/ourworks/work-4.png','Проект 4','Разработка сайта')
+            .text-center
+                a.btn.btn--mid(href="#") Посмотреть все работы
+    section.professianals-section
+        .container 
+            h2.section-title Положитесь на профессионалов
+            .row 
+                +description-card('images/check-box.svg', 'Опыт, проверенный временем', 'Более 500 успешных проектов за плечами – мы знаем, как разрабатывать действительно прибыльные интернет-магазины. Положительная реакция клиентов красноречиво подтверждает нашу компетенцию.', true)
+                +description-card('images/check-box.svg', 'Финансовые гарантии', 'Стоимость услуг закрепляется в договоре. Вы всегда будете знать, за что платите. Никаких дополнительных комиссии и скрытых условий. Только честный ценник за разработку интернет-магазина.',true)
+                +description-card('images/check-box.svg', ' Гибкое сотрудничество','Вы сможете без проблем изменить бюджет на любой стадии реализации проекта. Мы регулярно отчитываемся о каждом проведенном мероприятии.',true)
+            .row 
+                +description-card('images/check-box.svg', 'Профессиональное обслуживание', 'Для вас – персональный менеджер и команда специалистов, которые сопроводят ваши интересы на каждой стадии сотрудничества.', true)
+                +description-card('images/check-box.svg', 'Фиксированная стоимость', 'Цена всех работ закрепляется в договоре и не подлежит изменению до конца сотрудничества.',true)
+                +description-card('images/check-box.svg', 'Гарантированный результат','Создаем интернет-магазины, которые приносят прибыль, приятные отзывы и выгодное партнерство для владельцев.', true)
+            .row 
+                +description-card('images/check-box.svg', 'Заслуженное доверие', 'Веб студия ПроффИТ дорожит своей репутацией. Мы не первый год помогаем предпринимателям освоить новые отрасли электронной торговли.', true)
+                +description-card('images/check-box.svg', 'Официальный договор', 'Четкая фиксация стоимости, сроков, услуг и других важных пунктов сотрудничества.', true)
+                +description-card('images/check-box.svg', 'Гарантия на 1 год','После разработки и запуска интернет-магазина от Веб студии ПроффИТ вы получаете гарантию на бесплатное обслуживание в течение 1 года.', true)
+    section.form-section.form-section--subtitle
+        .container 
+            .row
+                h3.text-white Прибыль, мировой охват, довольные клиенты – выгоды от сотрудничества с Веб студией ПроффИТ
+    section.our-clients 
+        .container 
+            h2.section-title Наши клиенты
+            .row 
+                img.img(src='images/logo/Logo-1.png')
+                img.img(src='images/logo/Logo-2.png')
+                img.img(src='images/logo/Logo-3.png')
+                img.img(src='images/logo/Logo-4.png')
+                img.img(src='images/logo/Logo-5.png')
+    section.social-section
+        .container
+            h2.section-title Способы связи с ПроффИТ
+            .row
+                a.social-box(href="#") Написать в WhatsApp
+                    img.social-icon(src="images/contact-icons/whatsapp-big-icon.svg")
+                a.social-box(href="#") Написать в Telegram
+                    img.social-icon(src="images/contact-icons/telegram-big-icon.svg")
+                a.social-box(href="#") Отправить Email
+                    img.social-icon(src="images/contact-icons/mail-big-icon.svg")
+                a.social-box(href="#") Оставить заявку
+                    img.social-icon(src="images/contact-icons/callback-big-icon.svg")
+                a.social-box(href="#") Написать в ВКонтакте
+                    img.social-icon(src="images/contact-icons/vk-big-icon.svg")
+    
+    section.faq-section
+        .container
+            .row
+                .faq-section__column
+                    h2.section-title Ответы на популярные вопросы
+                    p.subtitle. 
+                        Мы подготовили ответы на наиболее волнующие вас вопросы,
+                        чтобы сотрудничество изначально было более гладким и ясным.
+                .faq-section__column
+                    +faq-block('Почему стоимость сайта выше, чем у конкурентов?','Сколько специалистов работают в отделе разработке и продвижения?')
+                    +faq-block('На какой CMS системе вы создаете сайты?','Сколько специалистов работают в отделе разработке и продвижения?')
+                    +faq-block('Можем мы в дальнейшем менять информацию на сайте самостоятельно, например, новости/фото/товары?','Сколько специалистов работают в отделе разработке и продвижения?')
+                    +faq-block('Какую гарантию даете на создание сайта?','Сколько специалистов работают в отделе разработке и продвижения?')
+                    +faq-block('Что входит в стоимость разработки сайта?','Сколько специалистов работают в отделе разработке и продвижения?')
+                    +faq-block('Сколько времени уходит на создание сайта?','Сколько специалистов работают в отделе разработке и продвижения?')
+                    +faq-block('Как будет проходить процесс нашей с вами работы по созданию сайта?','Сколько специалистов работают в отделе разработке и продвижения?')
+
+
+
+
+
+
+
+                
+
+
+
+
+
+            

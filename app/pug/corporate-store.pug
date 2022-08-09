@@ -1,0 +1,159 @@
+extends layout/base
+
+block title
+    title Разработка корпоративных сайтов
+include mixins/first-section
+include mixins/benefit-box
+include mixins/faq-block
+include mixins/store-card
+include mixins/card-box
+include mixins/works-box
+include mixins/description-card
+
+
+block content
+
+    .breadcrumbs
+        .container
+            ul.breadcrumbs__list
+                li
+                    a(href="index.html") Главная
+                li
+                    a(href="site-development.html") Создание сайтов
+                li
+                    span Разработка корпоративных сайтов
+
+    +first-section('Разработка корпоративных сайтов','Бизнес-площадка, которая решит любую задачу вашей компании' , false,'images/section-images/laptop.jpg', false, true, 'Корпоративный сайт – полноценное представительство вашего бизнеса во Всемирной сети. Благодаря услугам компании ПроффИТ вы сможете стать владельцем онлайн-площадки, которая будет одинакова полезной как для клиентов, так и для персонала. Предлагайте продукцию, оповещайте партнеров и демонстрируйте свои сильные стороны через премиальный корпоративный сайт.'  )
+
+    section.benefits-section
+        .container
+            h2.section-title Корпоративный сайт – это:
+            .benefits-section__content
+                .row
+                    +benefit-box('images/check-box.svg', 'Автоматизация обслуживания клиентов' )
+                    +benefit-box('images/check-box.svg', 'Првильное позиционирование бренда в интернете')
+                    +benefit-box('images/check-box.svg', 'Рост продаж и размера чека')
+                .row
+                    +benefit-box('images/check-box.svg', 'Наращивание выгодного партнерства' )
+                    +benefit-box('images/check-box.svg', 'Легкий поиск новых работников')
+                    +benefit-box('images/check-box.svg', 'Укрепление имиджа бизнеса')
+    section.form-section
+        .container
+            .form-section__title
+                h2.section-title--white Быстрый расчет стоимости корпоративного сайта
+                .form-text Оставьте контактные данные – мы свяжемся с вами в ближайшее время для бесплатной консультации
+            .form-section__body
+                form.js-ajax-form
+                    .form-control
+                        .form-text Ваш имя
+                        input.modal-input(type="text", name="name", placeholder="Ваше имя" required)
+                    .form-control
+                        .form-text Ваш номер телефона
+                        input.modal-input(type="tel", name="phone", placeholder="Ваш телефон" required)
+                    .button-block
+                        button.btn.btn--modal.btn--fullwidth(type="submit") Отправить
+            .form-section__footer
+                .footer-text Нажимая на кнопку, вы принимаете политику конфиденциальности и даете согласие на обработку персональных данных
+    section.creation-section
+        .container
+            .creation-section__info            
+                h2.section-title Как мы создаем корпоративные сайты?
+                h3.subtitle.subtitle--big Анализ бизнеса и создание прототипа
+                p.create-text Анализируем ЦА, оцениваем конкурентов, выбираем подходящие инструменты и проводим usability-аудит. Если сайт уже имеется – выявляем ошибки и устраняем их в сжатые сроки.
+                p.create-text.create-text--bold Срок выполнения – 2 дня
+                .button-block
+                        button.btn(type="submit") Подробнее
+            .creation-section__img
+                img.img(src="images/section-images/create-img.png")
+            .creation-section__tabs 
+                .create-tab Подготовка проекта
+                .create-tab Разработка прототипа
+                .create-tab Создание дизайна
+                .create-tab Верстка
+                .create-tab Подключение CMS
+                .create-tab SEO и контент
+                .create-tab Финальная проверка и запуск
+                .create-tab Сопровождение проекта
+    section.two-weeks-section 
+        .container 
+            h2.section-title Всего 2 недели разработки – за счет готовых решений
+            p.custom-text Сохраните бюджет и сократите сроки благодаря готовым решениям компании ПроффИТ
+            .row 
+                +store-card('images/section-images/store-img-1.jpg','Готовые шаблоны','Мы имеем целую коллекцию уже проработанных прототипов, которые могут легко стать основой вашего будущего корпоративного сайта.')
+                +store-card('images/section-images/store-img-2.jpg','Готовый дизайн','Помимо прототипов, в нашем арсенале есть также уже проработанные макеты корпоративных сайтов, которые выполнены в строгом соответствии с современными требованиями оформления.')
+                +store-card('images/section-images/store-img-3.jpg','CMS','Интеграция уже готовых решений CMS и адаптивной верстки в ваш проект, которая существенно сократит сроки разработки.')
+    section.works 
+        .container 
+            h2.section-title Коллекция наших проектов
+            p.subtitle.
+                Взгляните на примеры наших работ, которые полностью удовлетворили запросы заказчиков.
+            .row
+                +works-box('images/ourworks/work-1.png','Проект 1','Разработка сайта')
+                +works-box('images/ourworks/work-2.png','Проект 2','Разработка сайта')
+            .row
+                +works-box('images/ourworks/work-3.png','Проект 3','Разработка сайта')
+                +works-box('images/ourworks/work-4.png','Проект 4','Разработка сайта')
+            .text-center
+                a.btn.btn--mid(href="#") Посмотреть все работы
+    section.professianals-section
+        .container 
+            h2.section-title Разработка ПроффИТ – ваш крепкий имидж в интернете 
+            .row 
+                +description-card('images/check-box.svg', 'Опыт', 'Мы создали свыше 100 проектов для клиентов, и среди них – десятки премиальных корпоративных сайтов. Наши проекты привлекают пользователей, помогают бизнесу и укрепляют его имидж.', true)
+                +description-card('images/check-box.svg', 'Договор', 'аботаем строго в соответствии с условиями, указанными в договоре. Учитываем все ключевые показатели KPI.',true)
+                +description-card('images/check-box.svg', 'Доступность','Стоимость фиксируется в договоре – вы всегда сможете рассчитывать на прозрачный бюджет разработки.',true)
+    section.strength-section
+        .container 
+            h2.section-title Сильные стороны ПроффИТ
+            .row
+                +description-card('images/icons/1.svg', 'Профессионализм' ,'Мы – команда разработчиков, дизайнеров, верстальщиков и SEO-специалистов, которая не первый год помогает предприятиям заручиться мощной площадкой для работы в интернете.', true)
+                +description-card('images/icons/2.svg', 'Честная цена' ,'Еще перед составлением договора вы будете знать точную стоимость сотрудничества.', true)
+                +description-card('images/icons/3.svg', 'Результат' ,'По итогам сотрудничества вы станете собственником корпоративного сайта, который будет занимать высокие позиции в поисковых системах.', true)
+            .row
+                +description-card('images/icons/4.svg', 'Репутация' ,'Положительные отзывы и комментарии наших клиентов – не просто слова. Это прямое подтверждение нашей компетенции.', true)
+                +description-card('images/icons/5.svg', 'Оперативность' ,'Не допускаем просрочек обязательств и всегда соблюдаем условия договора.', true)
+                +description-card('images/icons/6.svg', 'Гарантия','После запуска корпоративного сайта мы предоставляем гарантию на бесплатное техническое обслуживание в течение 1 года.', true)       
+    section.form-section.form-section--subtitle
+        .container 
+            .row
+                h3.text-white Корпоративный сайт от ПроффИТ – ваша прибыльная площадка в интернете
+    section.our-clients 
+        .container 
+            h2.section-title Наши клиенты
+            .row 
+                img.img(src='images/logo/Logo-1.png')
+                img.img(src='images/logo/Logo-2.png')
+                img.img(src='images/logo/Logo-3.png')
+                img.img(src='images/logo/Logo-4.png')
+                img.img(src='images/logo/Logo-5.png')
+    section.social-section
+        .container
+            h2.section-title Способы связи с ПроффИТ
+            .row
+                a.social-box(href="#") Написать в WhatsApp
+                    img.social-icon(src="images/contact-icons/whatsapp-big-icon.svg")
+                a.social-box(href="#") Написать в Telegram
+                    img.social-icon(src="images/contact-icons/telegram-big-icon.svg")
+                a.social-box(href="#") Отправить Email
+                    img.social-icon(src="images/contact-icons/mail-big-icon.svg")
+                a.social-box(href="#") Оставить заявку
+                    img.social-icon(src="images/contact-icons/callback-big-icon.svg")
+                a.social-box(href="#") Написать в ВКонтакте
+                    img.social-icon(src="images/contact-icons/vk-big-icon.svg")
+    
+    section.faq-section
+        .container
+            .row
+                .faq-section__column
+                    h2.section-title Ответы на популярные вопросы
+                    p.subtitle. 
+                        Мы подготовили ответы на наиболее волнующие вас вопросы,
+                        чтобы сотрудничество изначально было более гладким и ясным.
+                .faq-section__column
+                    +faq-block('Почему стоимость сайта выше, чем у среднерыночная?','Сколько специалистов работают в отделе разработке и продвижения?')
+                    +faq-block('Какими CMS пользуетесь?','Сколько специалистов работают в отделе разработке и продвижения?')
+                    +faq-block('Можем мы в дальнейшем менять информацию на сайте самостоятельно, например, новости/фото/товары?','Сколько специалистов работают в отделе разработке и продвижения?')
+                    +faq-block('Какую гарантию даете на создание сайта?','Сколько специалистов работают в отделе разработке и продвижения?')
+                    +faq-block('Что входит в стоимость разработки сайта?','Сколько специалистов работают в отделе разработке и продвижения?')
+                    +faq-block('Сколько времени уходит на создание сайта?','Сколько специалистов работают в отделе разработке и продвижения?')
+                    +faq-block('Как будет проходить процесс нашей с вами работы по созданию сайта?','Сколько специалистов работают в отделе разработке и продвижения?')

@@ -1,0 +1,90 @@
+extends layout/base
+
+block title
+    title Главная
+
+include mixins/home-section-block
+include mixins/marketing-box
+include mixins/works-box
+include mixins/reason-block
+include mixins/faq-block
+block content
+
+    section.home-section
+        .container
+            h1.home-section__title Разработка и продвижение сайтов в Набережных Челнах
+            .row
+                +home-section-block('Разработка','Создание премиальных сайтов от специалистов, которые помогли с запуском свыше 100 коммерческих проектов.','Landing Page','Интернет-магазины','Корпоративные сайты')
+                +home-section-block('Продвижение','Наращивание аудитории, лидерство в поисковых системах и укрепление имиджа в интернете.','Контекстная реклама','SEO-продвижение')
+            p.home-section__text. 
+                Профессиональная команда, готовые инструменты для решения любых поставленных задач
+                и акцент на качественном сопровождении интересов клиента – принципы компании ПроффИТ,
+                благодаря которым вы станете владельцем высокодоходной и популярной интернет-площадки.
+
+    section.marketing-section
+        .container
+            h2.section-title Интернет-маркетинг – для всех и каждого
+            p.subtitle. 
+                С 2017 года компания ПроффИТ на деле показывает, что такое премиальный
+                интернет-маркетинг с внушительными результатами.
+            .row
+                +marketing-box('images/icons/website.svg','Разработка сайтов','Landing Page','Интернет-магазины','Корпоративные сайты')
+                +marketing-box('images/icons/seo.svg','Продвижение сайтов','Контекстная реклама','SEO-продвижение')
+                +marketing-box('images/icons/crm.svg','CRM','Интеграция с WordPres','Интеграция c OpenCart')
+
+    section.works-section
+        .container
+            h2.section-title Наши работы
+            p.subtitle. 
+                Взгляните на примеры наших проектов, которые полностью удовлетворили заказчиков
+            .row
+                +works-box('images/ourworks/work-1.png','Проект 1','Разработка сайта')
+                +works-box('images/ourworks/work-2.png','Проект 2','Разработка сайта')
+                +works-box('images/ourworks/work-3.png','Проект 3','Разработка сайта')
+                +works-box('images/ourworks/work-4.png','Проект 4','Разработка сайта')
+            .text-center
+                a.btn.btn--mid(href="#") Посмотреть все работы
+
+    section.reasons-section
+        .container
+            h2.section-title Почему выбирают нас
+            .row
+                +reason-block('images/reasons-icons/wallet-icon.svg','Разработка от 40 тысяч рублей','При выборе готовых решений ваш сайт будет готов за 2 недели. Мы используем лучшие инструменты дизайна, верстки и SEO-продвижения.')
+                +reason-block('images/reasons-icons/rocket-icon.svg','Оптимизация','Ускоряем сайты и адаптируем их под современные поисковые системы Google и Яндекс с применением «белых» методов продвижения.')
+                +reason-block('images/reasons-icons/layout-icon.svg','Качественный функционал и наполнение','Ответственно подходим к созданию контента и опций сайта с учетом потребностей вашего бизнеса, его целевой аудитории и особенностей рынка.')
+                +reason-block('images/reasons-icons/clock-icon.svg','Оперативность','Полное соответствие условиям договора. Средний срок разработки – от 2 недель до месяца.')
+                +reason-block('images/reasons-icons/laptop-code-icon.svg','Разработка «под ключ»','При обращении к нам вам не потребуется искать специалистов на стороне. Мы организуем комплексное обслуживание.')
+                +reason-block('images/reasons-icons/adaptive-icon.svg','Гибкость','Каждый проект веб-студии ПроффИТ адаптируется под разные устройства, включая смартфоны и планшеты.')
+    
+    section.social-section
+        .container
+            h2.section-title Способы связи с ПроффИТ
+            .row
+                a.social-box(href="#") Написать в WhatsApp
+                    img.social-icon(src="images/contact-icons/whatsapp-big-icon.svg")
+                a.social-box(href="#") Написать в Telegram
+                    img.social-icon(src="images/contact-icons/telegram-big-icon.svg")
+                a.social-box(href="#") Отправить Email
+                    img.social-icon(src="images/contact-icons/mail-big-icon.svg")
+                a.social-box(href="#") Оставить заявку
+                    img.social-icon(src="images/contact-icons/callback-big-icon.svg")
+                a.social-box(href="#") Написать в ВКонтакте
+                    img.social-icon(src="images/contact-icons/vk-big-icon.svg")
+    
+    section.faq-section
+        .container
+            .row
+                .faq-section__column
+                    h2.section-title Ответы на популярные вопросы
+                    p.subtitle. 
+                        Мы подготовили ответы на наиболее волнующие вас вопросы,
+                        чтобы сотрудничество изначально было более гладким и ясным.
+                .faq-section__column
+                    +faq-block('Сколько специалистов работают в отделе разработке и продвижения?','Сколько специалистов работают в отделе разработке и продвижения?')
+                    +faq-block('Как я буду получать информацию о ходе работы?','Сколько специалистов работают в отделе разработке и продвижения?')
+                    +faq-block('Есть ли гарантии?','Сколько специалистов работают в отделе разработке и продвижения?')
+                    +faq-block('Работаете ли вы с оплатой за результат?','Сколько специалистов работают в отделе разработке и продвижения?')
+                    +faq-block('Как вы определяете оптимальный способ продвижения?','Сколько специалистов работают в отделе разработке и продвижения?')
+                    +faq-block('Вы работаете с НДС?','Сколько специалистов работают в отделе разработке и продвижения?')
+                    +faq-block('Есть ли скидки?','Сколько специалистов работают в отделе разработке и продвижения?')
+

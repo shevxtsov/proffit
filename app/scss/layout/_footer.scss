@@ -1,0 +1,140 @@
+.footer{
+	display: flex;
+	justify-content: center;
+	background-color: #EFEFEF;
+	@include rem(padding-top, 44px);
+	@include rem(padding-bottom, 44px);
+
+	.row{
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+
+		@include media("max", "md"){
+			flex-direction: column-reverse;
+		}
+	}
+
+	a{
+		@include rem(line-height, 28px);
+
+		@include media("max", "md"){
+            font-size: 16px;
+			line-height: 20px;
+        }
+	}
+
+	&__menu{
+		display: flex;
+		flex-direction: column;
+		@include rem(margin-right, 140px);
+
+		li{
+			a{
+				@include rem(line-height, 34px);
+
+				&:hover{
+					color: $primary;
+				}
+
+				@include media("max", "md"){
+					font-size: 16px;
+					line-height: 28px;
+				}
+			}
+		}
+	
+		&:last-child{
+			margin-right: 0;
+		}
+	
+		a{
+			@include rem(margin-bottom,16px);
+		}
+
+		@include media("max", "md"){
+			margin-right: 0;
+			flex: 0 0 100%;
+			max-width: 100%;
+			margin-top: 20px;
+			text-align: center;
+		}
+	}
+
+	.logo-img{
+		@include rem(margin-bottom, 28px);
+	}
+
+	.social{
+		@include rem(margin-bottom, 10px);
+
+		@include media("max", "md"){
+            margin-bottom: 15px;
+			justify-content: center;
+			margin-top: 15px;
+        }
+	}
+
+	@include media("max", "md"){
+		padding: 10px;
+	}
+
+	.btn{
+		@include rem(line-height, 16px);
+		@include rem(margin-bottom, 24px);
+
+		@include media("max", "md"){
+			display: none;
+		}
+	}
+
+	@include media("max", "md"){
+		padding: 30px 0;
+	}
+}
+
+.mail-link{
+	@include rem(font-size, 18px);
+}
+
+.footer-column{
+	display: flex;
+	flex-direction: column;
+
+	&:not(:first-child) {
+		@include rem(margin-top, -40px);
+
+		@include media("max", "md"){
+            margin-top: 0;
+        }
+	}
+
+	&:nth-child(1){
+		@include media("max", "md"){
+            order: 3;
+        }
+	}
+
+	&:nth-child(2){
+		@include media("max", "md"){
+            order: 2;
+        }
+	}
+
+	&:nth-child(3){
+		@include media("max", "md"){
+            order: 1;
+        }
+	}
+
+	&--flex{
+		flex-direction: row;
+	}
+
+	@include media("max", "md"){
+		justify-content: space-between;
+		width: 100%;
+		flex-wrap: wrap;
+		text-align: center;
+	}
+}

@@ -1,0 +1,20 @@
+mixin rate-block(title,coast,...lists)
+
+        .rate-block
+            .rate-block__header
+                .header-column
+                    h3.section-subtitle= title
+                    span.rate-grey 1  поисковая система
+                .header-column
+                    p.rate-coast= coast
+                    span.rate-grey /мес
+            .rate-block__body
+                ul
+                    li
+                        each list in lists
+                            p= list
+            .rate-block__footer
+                button.btn Заказать
+
+
+

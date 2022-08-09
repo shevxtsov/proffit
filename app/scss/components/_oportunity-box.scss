@@ -1,0 +1,35 @@
+.oportunity-box{
+  display: flex;
+  flex-direction: column;
+  @include rem(width,280px);
+
+  &:first-child{
+    @include rem(margin-bottom,32px);
+  }
+
+  &__number{
+    color: white;
+    background-color: $primary;
+    @include rem(width,48px);
+    @include rem(height,48px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 100px;
+    @include rem(margin-bottom,16px);
+    @include rem(font-size,20px);
+    @include rem(line-height,30px);
+  }
+
+  &__title{
+    @include rem(margin-bottom,8px);
+    font-weight: 700;
+    @include rem(font-size,24px);
+    @include rem(line-height,30px);
+  }
+
+  &__text {
+    @include rem(font-size,16px);
+    @include rem(line-height,24px);
+  }
+}

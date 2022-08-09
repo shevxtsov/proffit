@@ -1,0 +1,35 @@
+.sertificate-block{
+  @include rem(width,253px);
+  display: flex;
+  flex-direction: column;
+
+
+  &__img{
+    @include rem(margin-bottom,16px);
+    @include rem(height,355px);
+    position: relative;
+
+    .img-sertificate{
+      @include rem(width,253px);
+      @include rem(height,345px);
+      bottom:0;
+      position: absolute;
+      left: 0;
+      transition: all .3s;
+
+      &:hover{
+       margin-bottom: 10px;
+
+      }
+    }
+  }
+
+  &__text{
+    text-align: center;
+
+    &:hover{
+      color: $primary;
+      cursor: pointer;
+    }
+  }
+}

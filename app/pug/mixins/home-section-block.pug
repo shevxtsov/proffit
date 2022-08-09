@@ -1,0 +1,11 @@
+mixin home-section-block(title, text, ...list)
+    // home-section-block
+    .home-section-block
+        h3.home-section-block__title=title
+        p.home-section-block__text=text
+        ul.home-section-block__list
+            each item in list
+                li 
+                    span=item
+        a.btn(href="#") Подробнее
+    // / home-section-block

@@ -1,0 +1,12 @@
+mixin form-base(title)
+
+    .form-base
+        form.js-ajax-form
+            .form-base__title
+                h5.form-title= title
+            .form-control
+                span Ваш номер телефона
+                input.modal-input(type="tel", name="phone", placeholder="Ваш телефон" required)
+                .button-block
+                    button.btn.btn--modal(type="submit") Отправить
+            span.form-warn Нажимая на кнопку, вы принимаете политику конфиденциальности и даете согласие на обработку персональных данных

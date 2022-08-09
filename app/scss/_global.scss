@@ -1,0 +1,469 @@
+html{
+    box-sizing: border-box;
+}
+
+*, ::after, ::before {
+    box-sizing: border-box;
+	font-size: 1.11vw;
+
+	// @include media("min", "xl"){
+    //     font-size: .85vw;
+    // }
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    font-family: $font1;
+    font-size: .97vw;
+    // font-size: 1vw;
+    color: $dark;
+	font-weight: 400;
+    background-color: #fff;
+
+	&.is-fixed{
+		overflow: hidden;
+	}
+
+	@include media("max", "md"){
+        font-size: 16px;
+    }
+}
+
+p, h1, h2, h3, h4, h5, h6 {
+    padding: 0;
+    margin: 0;
+	font-size: 1vw;
+}
+
+a {
+    text-decoration: none;
+	font-size: 1vw;
+    color: $dark;
+    outline: none;
+    cursor: pointer;
+	transition: all .5s;
+}
+
+ul, li{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+strong{
+	font-weight: 700;
+}
+
+.page-title{
+	font-weight: 700;
+	@include rem(font-size, 60px);
+	@include rem(line-height, 70px);
+	@include rem(margin-bottom, 32px);
+	color: $blue-dark;
+
+	@include media("max", "md"){
+		font-size: 28px;
+		line-height: 32px;
+		margin-bottom: 20px;
+	}
+}
+
+.wrapper{
+	overflow: hidden;
+	display: flex;
+	flex-direction: column;
+	min-height: 100vh;
+}
+
+.img {
+	height: auto;
+	max-width: 100%;
+}
+.pos-relative{
+	position: relative;
+}
+.mb-2{
+	margin-bottom: 20px;
+}
+.mb-6{
+	margin-bottom: 65px;
+}
+
+.text-center{
+	text-align: center;
+}
+.text-underline{
+	text-decoration: underline;
+}
+.form-warn{
+    color: $text-grey;
+    @include rem(font-size,12px);
+    @include rem(line-height,17px);
+  }
+.mb-3{
+	margin-bottom: 60px !important;
+}
+
+
+#upbutton {
+	background: url("../images/up.svg") no-repeat center center;
+	background-size: contain;
+	height: 35px;
+	width: 35px;
+	bottom: 15px;
+	right: 20px;
+	cursor: pointer;
+	display: none;
+	position: fixed;
+	z-index: 999;
+}
+
+.section-title {
+	@include rem(font-size, 48px);
+	@include rem(line-height, 60px);
+	@include rem(margin-bottom, 24px);
+	font-weight: 700;
+
+	&--medium {
+		@include rem(font-size, 38px);
+		@include rem(line-height, 56px);
+		@include rem(margin-top, 60px);
+	}
+
+	&--small {
+		@include rem(font-size, 36px);
+		@include rem(line-height, 38px);
+		@include rem(margin-top, 32px);
+		@include rem(margin-bottom, 16px);
+		font-weight: 600;
+	}
+
+	&--color{
+		color: #fff
+	}
+
+	&--white {
+		@include rem(font-size,36px);
+		color: white;
+		font-weight: 700;
+		@include rem(width,656px);
+		width: 70%;
+	}
+
+	@include media("max", "md"){
+        font-size: 24px;
+		line-height: 28px;
+		margin-bottom: 16px;
+    }
+}
+
+.section-subtitle{
+	@include rem(font-size, 24px);
+	@include rem(line-height, 36px);
+	@include rem(font-weight, 500);
+	// color: #282938;
+	color: $blue-dark
+}
+
+.subtitle {
+	@include rem(font-size, 18px);
+	@include rem(line-height, 30px);
+	@include rem(margin-bottom, 24px);
+
+	&--big {
+		@include rem(font-size, 36px);
+		@include rem(line-height, 44px);
+		font-weight: 600
+	}
+
+	&--meduim {
+		@include rem(line-height, 30px);
+		@include rem(margin-bottom, 32px);
+		@include rem(margin-top, 8px);
+		font-weight: 400;
+	}
+
+	&--small {
+		@include rem(font-size, 24px);
+		@include rem(line-height, 32px);
+		@include rem(margin-bottom, 16px);
+		font-weight: 400;
+	}
+
+	&--small-white {
+		@include rem(font-size, 24px);
+		@include rem(line-height, 32px);
+		@include rem(max-width, 482px);
+		font-weight: 400;
+		color: #fff;
+		margin-bottom: 0;
+	}
+
+	&--primary {
+		color: $primary;
+	}
+
+	@include media("max", "md"){
+        font-size: 16px;
+		line-height: 22px;
+		margin-bottom: 25px;
+    }
+}
+
+.container{
+	margin: 0 auto;
+	@include rem(width,1242px);
+	@include rem(padding-left,15px);
+	@include rem(padding-right,15px);
+
+	@include media("max", "md"){
+		width: 100%;
+		padding: 0 15px;
+	}
+}
+
+iframe{
+	width: 100%;
+	height: 100%;
+}
+
+.green-link {
+	color: rgb(96, 197, 96);
+	text-decoration: underline;
+	@include rem(font-size, 18px);
+	@include rem(line-height, 28px);
+
+	&:hover {
+		text-decoration: none;
+	}
+
+	@include media("max", "md"){
+		font-size: 16px;
+		line-height: 24px;
+	}
+}
+
+.list {
+	@include rem(margin-top, 16px);
+
+	li {
+		position: relative;
+		color: $text-grey;
+		@include rem(padding-left, 15px);
+		@include rem(font-size, 16px);
+		@include rem(line-height, 28px);
+		@include rem(padding-bottom, 16px);
+
+		&:before {
+			content: "";
+			@include rem(height, 7px);
+			@include rem(width, 7px);
+			@include rem(top, 7px);
+			@include rem(left, 0);
+			background-color: $primary;
+			border-radius: 50%;
+			position: absolute;
+
+			@include media("max", "md"){
+				width: 7px;
+				height: 7px;
+				top: 5px;
+			}
+		}
+
+		@include media("max", "md"){
+            font-size: 16px;
+			line-height: 22px;
+			padding-left: 20px;
+        }
+	}
+
+	&--card {
+		@include rem(line-height, 24px);
+
+		li {
+			@include rem(line-height, 24px);
+			color: $blue-dark;
+			@include rem(padding-left, 20px);
+
+			&:before {
+				content: "";
+				@include rem(height, 12px);
+				@include rem(width, 12px);
+				@include rem(top, 7px);
+				@include rem(left, 0);
+
+				background-color: #fff;
+				border: 1px solid $primary;
+				border-radius: 50%;
+				position: absolute;
+			}
+				
+		}
+	}
+
+	&--margin {
+		@include rem(margin-top, 0);
+    	
+		li {
+			@include rem(padding-bottom, 7px);
+			@include rem(font-size, 18px);
+			@include rem(line-height, 24px);
+			color: $blue-dark;
+		}
+	}
+
+	@include media("max", "md"){
+		margin-top: 20px;
+	}
+}
+
+.lists {      
+	@include rem(padding-left,15px);
+	position: relative;
+
+	&:before {
+		content: "";
+		height: 7px;
+		width: 7px;
+		top: 13px;
+		left: 0;
+		background-color: $primary;
+		border-radius: 50%;
+		position: absolute;
+		@include rem(margin-right,10px);
+	}
+}
+
+
+.block-quotes {
+    @include rem(margin-top, 47px);
+    @include rem(margin-bottom, 47px);
+    @include rem(padding-bottom, 9px);
+    @include rem(padding-top, 9px);
+    @include rem(padding-left, 24px);
+    border-left: 2px solid $primary;
+
+    .quotes-text {
+        font-weight: 500;
+        color: #333F51;
+        @include rem(font-size, 24px);
+        @include rem(line-height, 32px);
+        @include rem(margin-bottom, 32px);
+
+		@include media("max", "md"){
+			font-size: 18px;
+			line-height: 26px;
+		}
+    }
+
+	span {
+		@include rem(font-size, 18px);
+		@include rem(line-height, 28px);
+		font-weight: 500;
+        color: #8896AB;
+
+		@include media("max", "md"){
+			font-size: 16px;
+			line-height: 24px;
+		}
+	}
+
+	@include media("max", "md"){
+        margin: 20px 0 10px;
+		padding-left: 15px;
+		margin-bottom: 35px;
+    }
+}
+
+.kew-words{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    @include rem(padding-top, 24px);
+    @include rem(padding-bottom, 24px);
+    border-top: 1px solid #afafaf;
+    border-bottom: 1px solid #afafaf;
+    @include rem(max-width, 1010px);
+	margin: 0 auto;
+	@include rem(margin-top, 35px);
+    @include rem(margin-bottom, 60px);
+
+    &__title{
+        @include rem(font-size, 24px);
+        @include rem(line-height, 36px);
+        font-weight: 600;
+        color: $primary;
+
+		@include media("max", "md"){
+			font-size: 22px;
+			line-height: 28px;
+			margin-bottom: 10px;
+		}
+    }
+
+    &__list{
+        display: flex;
+        justify-content: space-around;
+        @include rem(min-width, 660px);
+
+        li {
+            @include rem(font-size,18px);
+            @include rem(line-height,32px);
+            color: $text-grey;
+
+			a{
+				@include rem(font-size, 18px);
+
+				&:hover{
+					color: $primary;
+				}
+
+				@include media("max", "md"){
+					font-size: 16px;
+					line-height: 22px;
+				}
+			}
+
+			@include media("max", "md"){
+				margin-bottom: 10px;
+				margin-right: 15px;
+			}
+        }
+
+		@include media("max", "md"){
+			flex-wrap: wrap;
+			justify-content: center;
+		}
+    }
+
+	@include media("max", "md"){
+		padding: 16px 0;
+		max-width: 100%;
+		margin: 30px 0 0;
+		flex-wrap: wrap;
+	}
+}
+
+.border-grey{
+    border-top: 1px solid #EEF0F3;
+
+    &--seo{
+        @include rem(margin-top, 40px);
+        @include rem(margin-bottom, 32px);
+
+		@include media("max", "md"){
+			margin: 30px 0;
+		}
+    }
+
+    &--big{
+        @include rem(margin-top, 60px);
+        @include rem(margin-bottom, 60px);
+
+		@include media("max", "md"){
+			margin: 40px 0;
+		}
+    }
+}

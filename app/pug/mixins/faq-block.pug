@@ -1,0 +1,7 @@
+mixin faq-block(title, text, id, active)
+    // faq-block
+    .faq-block
+        .faq-block__title.js-drop-click
+            span=title
+            img(src="images/icons/arrowdown.png" alt="")
+        .faq-block__text= text

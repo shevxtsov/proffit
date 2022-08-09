@@ -1,0 +1,41 @@
+.benefit-box {
+    background-color: $grey;
+    position: relative;
+    @include rem(padding-top, 56px);
+    @include rem(padding-left, 32px);
+    @include rem(padding-right, 85px);
+    @include rem(border-radius, 6px);
+    @include rem(width, 594px);
+    @include rem(height, 205px);
+    @include rem(margin-right, 30px);
+    &:last-child {
+        @include rem(margin-right, 0);
+    }
+
+    &--small {
+        @include rem(max-width, 386px);
+        @include rem(height, 132px);     
+    }
+
+    &__img {
+        position: absolute;
+        top: -24px;
+        left: 32px;
+    }
+
+    &__title {
+        font-weight: 700;
+        @include rem(font-size, 18px);
+        @include rem(line-height, 22px);
+    }
+
+    &__text {
+        @include rem(margin-top, 16px);
+    }
+
+    .benefit-box-title {
+        font-weight: 700;
+        @include rem(font-size, 24px);
+        @include rem(line-height, 29px);
+    }
+}

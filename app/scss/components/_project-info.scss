@@ -1,0 +1,43 @@
+.project-info{
+    display: flex;
+    justify-content: space-between;
+    @include rem(margin-top, 48px);
+    @include rem(max-width, 1135px);
+    @include rem(padding-bottom, 32px);
+
+    &__item{
+        @include media("max", "md"){
+            margin-bottom: 20px;
+        }
+    }
+
+    &__name{
+        @include rem(font-size, 16px);
+        @include rem(line-height, 28px);
+        color: $blue-dark;
+
+        @include media("max", "md"){
+            font-size: 14px;
+            line-height: 18px;
+        }
+    }
+
+    &__value{
+        @include rem(font-size, 24px);
+        @include rem(line-height, 26px);
+        @include rem(margin-top, 5px);
+        font-weight: 600;
+        color: $blue-dark;
+
+        @include media("max", "md"){
+            font-size: 18px;
+            line-height: 24px;
+        }
+    }
+
+    @include media("max", "md"){
+        flex-wrap: wrap;
+        max-width: 90%;
+        padding-bottom: 0;
+    }
+}

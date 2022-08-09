@@ -1,0 +1,54 @@
+.breadcrumbs{
+	@include rem(padding-top, 16px);
+	@include rem(padding-bottom, 30px);
+
+	&__list{
+		li{
+			display: inline-flex;
+			position: relative;
+			@include rem(margin-right, 10px);
+	
+			a{
+				color: $primary;
+				@include rem(font-size, 12px);
+	
+				&::after{
+					content: "-";
+					position: absolute;
+					display: inline-block;
+					@include rem(font-size, 12px);
+					@include rem(right, -10px);
+					@include rem(top, 0);
+
+					@include media("max", "md"){
+						font-size: 12px;
+						right: -10px;
+					}
+				}
+
+				@include media("max", "md"){
+					font-size: 12px;
+					line-height: 12px;
+				}
+			}
+	
+			span{
+				color: #868686;
+				@include rem(font-size, 12px);
+
+				@include media("max", "md"){
+					font-size: 12px;
+					line-height: 12px;
+				}
+			}
+
+			@include media("max", "md"){
+				margin-right: 12px;
+			}
+		}
+	}
+
+	@include media("max", "md"){
+		padding: 15px 0;
+	}
+}

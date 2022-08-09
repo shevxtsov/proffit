@@ -1,0 +1,180 @@
+extends layout/base
+
+block title
+    title Продвижение сайта
+include mixins/first-section
+include mixins/description-card
+include mixins/faq-block
+include mixins/reason-block
+include mixins/card-box
+
+
+block content
+
+    .breadcrumbs
+        .container
+            ul.breadcrumbs__list
+                li
+                    a(href="index.html") Главная
+                li
+                    span Продвижение сайта
+
+    +first-section('Продвижение сайта в Набережных Челнах', 'Гарантия лидирующих позиций вашего сайта в поисковых системах Google и Яндекс', 'Оставьте заявку – мы добьемся для вашего бизнеса первых строчек результатов поисковой выдачи', 'images/section-images/seo.jpg', true  )
+
+    section.achievement-section
+        .container
+            h2.section-title Достижения наших клиентов
+            .achievement-box
+                .achievement-box__details
+                    .details-info 
+                        img.img(src="images/seo/cinar.jpg")
+                        .info-blog
+                            .info
+                                .info-list Сайт: 
+                                    a(href="#" class="info-list info-list--weight") cinar.ru 
+                            .info
+                                .info-list Регион: 
+                                    span.info-list.info-list--weight Москва
+                    .button-block
+                        button.btn Посмотреть позиции
+                .achievement-box__details
+                    img.social-img(src="images/seo/yandex.png")
+                    img.social-img(src="images/seo/google.png")
+                .achievement-box__details
+                    .graph-block 
+                        h3.section-subtitle Позиции сайта в ТОП-10 Яндекс и Google
+                        img.graph-img(src="images/seo/graph1.png")
+                    .graph-block
+                        h3.section-subtitle Посещаемость сайта и заявки
+                        img.graph-img(src="images/seo/graph2.png") 
+
+    section.seo-info
+        .container
+            .seo-info__column
+                img.column-img(src='images/seo/coast-seo.jpg')
+            .seo-info__column
+                .about-main-section__title
+                    h2.section-title Узнайте стоимость продвижения вашего сайта
+                    span Выберите удобный способ связи
+                .seo-info__tabs 
+                    button.tabs-btn Телефон
+                    button.tabs-btn Email
+                    button.tabs-btn Whatsapp
+                    button.tabs-btn Telegram
+                
+                form.form-seo
+                    .form__inputs
+                        .form-control
+                            span Ваш номер телефона
+                            input.modal-input(type="tel", name="phone", placeholder="Ваш телефон" required)
+                        .form-control
+                            span Адрес вашего сайта
+                            input.modal-input(type="text", name="address", placeholder="Адрес вашего сайта" required)
+                    .form__checkbox
+                        label.pick-item(for="var-1")
+                            input(type="checkbox" checked="" class="pick-item__input" id="var-1")
+                            .pick-item__label Нет сайта
+                    .form__submit
+                        //- .button-block
+                        button.btn.btn--fullwidth(type="submit") Получить предложение
+                        span.form-warn Нажимая на кнопку, вы принимаете политику конфиденциальности и даете согласие на обработку персональных данных
+    section.seo-price
+        .container
+            h2.section-title Что входит в стоимость услуг?
+            .column
+                .seo-price__columns
+                    +card-box('Подготовка', 'Индексация интернет-страниц в Яндексе и Google', ' Комплексная проверка структуры сайта', 'Анализ корректности составления ЧПУ', 'Проверка на дубликаты', 'Проверка HTML-кода', 'Анализ ссылочной массы', 'Реализация юзабилити')
+                    +card-box('Работа с ключевиками', 'Сбор семантического ядра', 'Составление стратегии продвижения', ' Создание структуры сайта', ' Распределение запросов', ' Анализ конкурентов ', 'Обработка новых поисковых запросов')
+                    +card-box('Контроль продвижения', 'Мониторинг доступности', 'Улучшение функционала сайта', '  Оформление отчетов по важным показателям для клиента ', ' Актуализация семантического ядра и ссылок')
+                .seo-price__columns
+                    +card-box('Копирайтинг', 'Оформление ТЗ', 'Написание текстов', ' Составление заголовков и мета-тегов', 'Наполнение контентом как существующих, так и новых страниц')
+                    +card-box('Настройка', 'Настройка сервисов Яндекс', 'Настройка сервисов Google')
+                    +card-box('Работа со ссылочной массой', 'Анализ ссылочной массы','Работа с негативными отзывами', 'Публикация положительных отзывов')        
+                    .card-box 
+                        h3.subtitle.subtitle--small Получить предложение
+                        .form-control
+                            input.modal-input(type="tel", name="phone", placeholder="Ваш телефон" required)
+                            button.btn.btn--min(type="submit") Отправить
+    section.calculate-coast
+        .container
+            h2.section-title SEO-продвижение от ПроффИТ – это:
+                .row
+                    +description-card('images/check-box.svg', 'Увеличение числа заявок и продаж')
+                    +description-card('images/check-box.svg', 'Повышение узнаваемости вашего бренда')
+                    +description-card('images/check-box.svg', ' Наращивание клиентской базы')
+                    +description-card('images/check-box.svg', ' Укрепление имиджа вашего бизнеса в интернете')  
+            .calculate-coast__column
+                .calculate-coast__info
+                    h2.section-title Калькулятор стоимости
+                    h3.subtitle.subtitle--small Узнайте точную сумму договора по продвижению сайта
+                    .form-control
+                        span Адрес вашего сайта
+                        input.modal-input(type="text", name="address", placeholder="Адрес вашего сайта" required)
+                    label.pick-item(for="var-2")
+                        input(type="checkbox" checked="" class="pick-item__input" id="var-2")
+                        .pick-item__label Нет сайта
+                    .button-block
+                        button.btn(type="submit") Далее ->
+                    .dots-block
+                        .dots
+                        .dots
+                        .dots
+                        .dots
+                        .dots
+                        .dots
+                .calculate-coast__img
+                    img.img(src="images/seo/girl-calc.png")
+    section.search-leadership
+        .container
+            h2.section-title Наше продвижение – ваше лидерство в поисковой выдаче
+            h3.subtitle.subtitle--meduim С поддержкой ПроффИТ Ваш сайт увидят миллионы пользователей из любой точки мира
+            .column
+                .row
+                    +reason-block('images/seo/search-1.svg', 'Техническая подготовка', 'Тщательно проверяем сайт на недочеты и недоработки с их последующим исправлением.')
+                    +reason-block('images/seo/search-3.svg', 'Укрепление имиджа в интернете', 'Работаем на долгосрочную репутацию вашего бренда.')
+                    +reason-block('images/seo/search-5.svg', 'Формирование ссылочной массы', 'Используем «вечные» ссылки, которые будут привлекать пользователей на ваш сайт в течение неограниченного времени.')
+                .row
+                    +reason-block('images/seo/search-1.svg', 'Создание контента', 'Детальный аудит текстов с их последующим обновлением.')
+                    +reason-block('images/seo/search-3.svg', 'Сбор семантического ядра', 'Формируем эффективные ключевики.')
+                    +reason-block('images/seo/search-5.svg', 'Оптимизация', 'Ежемесячное составление отчетов и тестирование проекта.')
+    section.form-section.form-section--small
+        .container 
+            .row
+                h2.section-title.section-title--color ПроффИТ – 
+                h3.subtitle.subtitle--small-white это гарантия вашей победы в результатах поисковой выдачи
+                button.btn.btn--modal(type="submit") Начать сотрудничество
+    section.leader-path
+        .container
+            h2.section-title Почему ПроффИТ — ваш путь к лидерству?
+            .row
+                +description-card('images/icons/1.svg', 'Индивидуальный подход' ,'Никаких шаблонных решений. Только уникальные методики, разработанные конкретно под ваш проект.', true)
+                +description-card('images/icons/2.svg', 'Акцент на долгосрочном сотрудничестве' ,'Более 70% клиентов, обратившихся в ПроффИТ в первый раз, становятся постоянными пользователями наших услуг.', true)
+                +description-card('images/icons/3.svg', 'Полное соответствие поставленным целям' ,'Строго соблюдаем требования клиента и условия составленного договора.', true)
+            .row
+                +description-card('images/icons/4.svg', 'Гарантия соответствия бюджету' ,'Ожидаемый KPI будет прописан в договоре', true)
+                +description-card('images/icons/5.svg', 'Регулярная отчетность' ,'Вы всегда будете находиться в курсе нашей работы и результатов.', true)
+                +description-card('images/icons/6.svg', 'Эффективность','Ориентация на ключевые показатели (LTV, ROI, ROAS) и проработка каждого варианта услуги.', true)       
+    section.faq-section
+        .container
+            .row
+                .faq-section__column
+                    h2.section-title Ответы на популярные вопросы
+                    p.subtitle. 
+                        Мы опубликовали ответы на самые популярные вопросы, которые возникают у наших клиентов
+                .faq-section__column
+                    +faq-block('Что вы предлагаете по услуге SEO-продвижения?','Сколько специалистов работают в отделе разработке и продвижения?')
+                    +faq-block('Как можно проверить результаты работ по SEO-продвижению?','Сколько специалистов работают в отделе разработке и продвижения?')
+                    +faq-block('Вы предоставляете отчет о проделанной работе по SEO-продвижению?','Сколько специалистов работают в отделе разработке и продвижения?')
+                    +faq-block('Сколько времени занимает SEO-продвижение?','Сколько специалистов работают в отделе разработке и продвижения?')
+                    +faq-block('Сайт попал в ТОП-10 – что дальше?','Вы работаете по системе «оплата за лиды»?')
+                    +faq-block('Есть ли гарантии достижения успеха?','Вы работаете по системе «оплата за лиды»?')
+    section.pre-footer
+        .container
+            .row 
+                h2.section-title-white Продвижение сайта в Яндекс и Google от компании ПроффИТ – гарантия привлечения максимально объемной аудитории
+                .pre-footer__content 
+                    p.text Пользователи интернета в первую очередь обращают внимание на первую страницу результатов поисковой выдачи. Именно эта десятка сайтов получает максимум внимания, прибыли и репутации. Наша задача – гарантировать вашему проекту «поисковый Олимп».
+                    p.text Продвижение сайта в обязательном порядке проводится командой профессионалов, а не одиночных специалистов. Чтобы SEO дало действительно ощутимый результат, требуется постоянное сотрудничество с мастерами. ПроффИТ предлагает комплекс решений, результат которых будет ярко виден как на короткой, так и на длинной дистанциях. Обращайтесь – станьте владельцем проекта, который будет привлекать пользователей по всей России. 
+
+            
+                

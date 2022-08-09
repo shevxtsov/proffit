@@ -1,0 +1,18 @@
+mixin reviews-box(img,name,subject,text)
+    // reviews-box
+    .reviews-box
+        .reviews-box__img
+            img.img(src=img, alt="")
+            a(data-fancybox="" href="https://www.youtube.com/watch?v=zDAx0KKwaLk&amp;autoplay=1&amp;rel=0") 
+                .play-btn
+                    img(src="images/play-btn.svg" alt="")
+        .reviews-box__content 
+            .reviews-box__header 
+                img(src="images/quotes.svg", alt="")
+                .reviews-box__header__content
+                    h5= name
+                    .reviews-box__subject= subject 
+            .reviews-box__text= text
+            a.btn.btn--simple(href="#") Подробнее
+
+    // / reviews-box

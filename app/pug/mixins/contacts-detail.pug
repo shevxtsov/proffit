@@ -1,0 +1,29 @@
+mixin contacts-detail(image,title,text, img1,img2, social)
+    // contacts-detail
+    if social
+        .contacts-detail
+            .contacts-detail__img
+                img.img(src=image, alt="") 
+            .contacts-detail__content 
+                .contacts-title=title 
+                .contacts-social
+                    ul.social
+                        li
+                            a(href="#")
+                                img(src=text)
+                        li
+                            a(href="#")
+                                img(src=img1)
+                        li
+                            a(href="#")
+                                img(src=img2) 
+    else 
+        .contacts-detail
+            .contacts-detail__img
+                img.img(src=image, alt="") 
+            .contacts-detail__content 
+                .contacts-title=title 
+                .contacts-text=text
+
+
+    // / contacts-detail

@@ -1,0 +1,12 @@
+mixin blog-box(img,title,text)
+    // blog box
+    article.blog-box
+        a(href="blog-single.html")
+            .blog-box__img
+                img.blog-img(src=img)
+            .blog-box__date
+                span 19 января 2022
+            h3.blog-box__title=title
+            .blog-box__text
+                p=text
+    // / blog box

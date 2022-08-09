@@ -1,0 +1,8 @@
+mixin card-box(title,  ...list)
+    // card-box
+    .card-box 
+        h3.subtitle.subtitle--small=title
+        ul 
+            each item in list
+                li.lists.card-list=item
+    // / card-box

@@ -1,0 +1,68 @@
+.contacts-detail{
+    display: flex;
+    @include rem(margin-top, 50px);
+
+    &__img{
+        @include rem(margin-right, 25px);
+
+        img{
+            @include rem(height, 48px);
+            @include rem(width, 48px);
+
+            @include media("max", "md"){
+                width: 34px;
+                height: 34px;
+            }
+        }
+
+        @include media("max", "md"){
+            margin-right: 15px;
+        }
+    }
+
+    &__content{
+        @include rem(padding-top, 8px);
+
+        .contacts-title{
+            font-weight: 700;
+            color: $blue-dark;
+            @include rem(margin-bottom, 8px);
+            @include rem(font-size, 36px);
+            @include rem(line-height, 38px);
+
+            @include media("max", "md"){
+                font-size: 22px;
+                line-height: 28px;
+            }
+        }
+
+        .contacts-text{
+            font-weight: 500;
+            color: $text-grey;
+            @include rem(font-size, 20px);
+            @include rem(line-height, 30px);
+
+            @include media("max", "md"){
+                font-size: 16px;
+                line-height: 22px;
+            }
+        }
+
+        .contacts-social {
+            display: flex;
+            flex-direction: column;
+        }
+
+        a{
+            @include media("max", "md"){
+                font-size: 16px;
+                line-height: 22px;
+            }
+        }
+    }   
+
+    @include media("max", "md"){
+		margin-top: 0;
+        margin-bottom: 20px;
+	}
+}

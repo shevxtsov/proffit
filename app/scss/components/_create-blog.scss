@@ -1,0 +1,96 @@
+.creation-section {
+    &__info {
+        .section-title{
+            @include rem(min-width, 550px);
+        }
+        @include rem(max-width, 518px);
+
+        .create-text {
+            @include rem(font-size, 18px);
+            @include rem(line-height, 24px);
+
+            &--bold {
+                font-weight: 600;
+                @include rem(margin-top, 24px);
+                @include rem(margin-bottom, 40px);
+            }
+        }
+    }
+
+    &__list {
+        @include rem(max-width, 518px);
+
+        .subtitle {
+            @include rem(margin-top, 135px);
+            @include rem(margin-bottom, 8px);
+        }
+    }
+    
+
+    &__img {
+        @include rem(margin-top, 102px);   
+        position: relative;   
+        z-index: 500;  
+
+        // .img {
+        //     @include rem(height, 415px);
+        //     @include rem(width, 283px); 
+              
+        &:after {
+            position: absolute;
+            content: "";
+            top: -46px;
+            left: -41px;        
+            @include rem(height, 112px);
+            @include rem(width, 112px);
+            background-image: url("../../images/frames/circle-after.svg");
+            background-size: contain;
+            background-repeat: no-repeat;
+            z-index: 1000;
+        }
+
+        &::before {
+            position: absolute;
+            content: "";
+            bottom: -34px;
+            right: -36px;        
+            @include rem(height, 90px);
+            @include rem(width, 150px);
+            background-image: url("../../images/frames/Frame.png");
+            background-size: contain;
+            background-repeat: no-repeat;
+            z-index: -5;     
+        }
+
+        .img {
+            @include rem(height, 415px);
+            @include rem(width, 283px); 
+            z-index: 100;  
+        }
+    }
+
+    &__tabs {
+        @include rem(margin-top, 102px);
+        
+        .create-tab{
+            display: flex;
+            justify-content: flex-end;
+            color: #8896AB;
+            @include rem(font-size, 14px);
+            @include rem(line-height, 20px);
+            @include rem(padding-top, 8px);
+            @include rem(padding-bottom, 8px);
+            @include rem(padding-left, 16px);
+            @include rem(padding-right, 16px);
+            @include rem(margin-bottom, 8px);
+            font-weight: 700;
+            cursor: pointer;
+
+            &:hover {
+                background-color: #FFC1DB;
+                color: $primary;
+                @include rem(border-radius, 6px);
+            }
+        }
+    }
+}

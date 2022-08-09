@@ -1,0 +1,57 @@
+.share-icons  {
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    @include rem(margin-bottom, 120px);
+
+    li {
+        @include rem(margin-right, 16px);
+
+        a {
+            background-color: #fff;
+            border: 1px solid #D5DAE1;
+            border-radius: 6px;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            @include rem(padding-right, 16px);
+            @include rem(padding-left, 16px);
+            @include rem(padding-top, 8px);
+            @include rem(padding-bottom, 8px);
+
+            &:hover{
+                background-color: $grey;
+            }
+
+            @include media("max", "md"){
+                padding: 8px 16px;
+            }
+        }
+    
+        span {
+            font-weight: 500;
+            @include rem(font-size, 14px);
+            @include rem(line-height, 20px);
+            @include rem(margin-left, 6px);
+
+            @include media("max", "md"){
+                font-size: 16px;
+                line-height: 24px;
+                margin-left: 6px;
+            }
+        }
+
+        &:last-child{
+            a {
+                @include rem(padding-right, 10px);
+                @include rem(padding-left, 10px);
+
+                @include media("max", "md"){
+                    padding-right: 10px;
+                    padding-left: 10px;
+                }
+            }
+        }
+    }
+}

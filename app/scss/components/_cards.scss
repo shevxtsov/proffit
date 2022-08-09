@@ -1,0 +1,82 @@
+.description-card{
+    position: relative;
+    
+    &__img {
+        position: absolute;
+        @include rem(top,-28px);
+        @include rem(left,32px);
+        
+    }
+
+    .description-card__content{
+        @include rem(padding-top,60px);
+        @include rem(padding-left,32px);
+        @include rem(padding-right,29px);
+        @include rem(padding-bottom,32px);
+        @include rem(max-width,386px);
+        @include rem(min-height,240px); 
+        @include rem(border-radius,10px); 
+        background-color: #fff; 
+        border-radius: 10px;
+
+        .subtitle {
+            font-weight: 700;
+        }
+        
+        &--small {
+            @include rem(padding-top,56px);
+            @include rem(padding-right,32px);
+            @include rem(padding-bottom,32px);
+            @include rem(max-width,282px);
+            @include rem(max-height,50px);  
+        }
+
+        .card-text {
+            @include rem(font-size,16px);
+            @include rem(line-height,24px);
+
+        }
+
+        .desc-title {
+            @include rem(font-size,18px);
+            @include rem(line-height,22px);
+            font-weight: 700;
+        }
+    }
+}
+
+.store-card {
+    @include rem(max-width, 387px);
+    &__img {
+        @include rem(width, 387px);
+        @include rem(height,272px);
+    }
+
+    &__content {
+        @include rem(margin-top, 24px);
+
+        .subtitle.subtitle--small {
+            @include rem(margin-bottom, 8px);
+            font-weight: 700;
+        }
+    }
+}
+
+.service-card {
+    @include rem(padding-top,24px);
+    @include rem(padding-left,16px);
+    @include rem(padding-bottom,46px);
+    @include rem(width, 236px);
+    @include rem(height,244px);
+    background-color: #fff;
+    @include rem(border-radius,10px); 
+
+    &__title {
+        font-weight: 700;
+        @include rem(font-size,18px);
+        @include rem(line-height,30px);
+    }
+}
+
+
+
